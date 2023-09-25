@@ -3,48 +3,21 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script type="text/javascript" src="validacio.js"></script>
+    <script type="text/javascript" src="script.js"></script>
     <title>Contacte</title>
 </head>
 <body>
     <h1>Contacte</h1>
-    <form id="contacteForm">
-        <label for="nom">Nom: </label>
-        <input type="text" id="nom" name="nom" required><br>
+    <form id="form">
+            <label for="name">Nom</label>
+            <input type="text" id="name" placeholder="Nom">
+            <span id="nError"></span>
 
         <br>
 
-        <label for="cognoms">Cognoms: </label>
-        <input type="text" id="cognoms" name="cognoms" required><br>
-
-        <br>
-
-        <label for="numFactura">Nº de factura: </label>
-        <input type="text" id="numFactura" name="numFactura" required><br>
-
-        <br>
-
-        <label for="assumpte">Assumpte: </label>
-        <input type="text" id="assumpte" name="assumpte" required><br>
-
-        <br>
-
-        <label for="motiu">Motiu de la consulta:</label>
-        <select id="motiu" name="motiu" required>
-            <option value="motiu">Motiu de la consulta</option>
-            <option value="Opcio1">Opció 1</option>
-            <option value="Opcio2">Opció 2</option>
-            <option value="Opcio3">Opció 3</option>
-        </select><br>
-
-        <br>
-
-        <label for="missatge">Missatge: </label>
-        <textarea id="missatge" name="missatge" rows="4" required></textarea><br>
-
-        <br>
-
-        <input type="submit" id="enviar" value="Enviar">
+        <div>
+            <input type="submit" id="submit">
+        </div>
     </form>
 </body>
 </html>

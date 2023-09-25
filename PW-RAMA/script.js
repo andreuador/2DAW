@@ -35,7 +35,7 @@ function main() {
         // Obtener los valores de los campos
         let nombre     = document.getElementById("nombre").value;
         let email      = document.getElementById("email").value;
-        let contraseña = document.getElementById("pwd").value;
+        let pwd = document.getElementById("pwd").value;
 
         // Realizar la validación ded datos (puedes personalizar esto segun tu necesidades)
         if(nombre.trim() === "") {
