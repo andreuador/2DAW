@@ -1,41 +1,50 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Contacte</title>
-        <meta charset="utf-8">
-        <script type="text/javacript" src="script.js"></script>
-    </head>
-    <body>
-        <h1>Contacte</h1>
-        <form id="contacteForm">
-            <label for="nom">Nom: </label> 
-            <input type="text" id="nom" name="nom" required>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript" src="validacio.js"></script>
+    <title>Contacte</title>
+</head>
+<body>
+    <h1>Contacte</h1>
+    <form id="contacteForm">
+        <label for="nom">Nom: </label>
+        <input type="text" id="nom" name="nom" required><br>
 
-            <label for="p_cognom">Primer cognom: </label>
-            <input type="text" id="p_cognom" name="p_cognom" required>
+        <br>
 
-            <label for="s_cognom">Segon cognom: </label>
-            <input type="text" id="s_cognom" name="s_cognom" required>
+        <label for="cognoms">Cognoms: </label>
+        <input type="text" id="cognoms" name="cognoms" required><br>
 
-            <label for="num_factura">Nº Factura: </label>
-            <input type="number" id="num_factura" name="num_factura" required>
+        <br>
 
-            <label for="assumpte">Assumpte: </label>
-            <input type="text" id="assumpte" name="num_factura">
+        <label for="numFactura">Nº de factura: </label>
+        <input type="text" id="numFactura" name="numFactura" required><br>
 
-            <br><br>
-            
-            <select>
-                <option value="Motiu de la consulta">Motiu de la consulta</option>
-                <option value="Opcio1">Opció 1</option>
-                <option value="Opcio2">Opció 2</option>
-                <option value="Opcio3">Opció 3</option>
-                <option value="Opcio4">Opció 4</option>
-                <option value="Opcio5">Opció 5</option>
-            </select>
+        <br>
 
-            <label for="text">Missatge: </label>
-            <textarea id="text" name="text" required>
-        </form>
-    </body>
+        <label for="assumpte">Assumpte: </label>
+        <input type="text" id="assumpte" name="assumpte" required><br>
+
+        <br>
+
+        <label for="motiu">Motiu de la consulta:</label>
+        <select id="motiu" name="motiu" required>
+            <option value="motiu">Motiu de la consulta</option>
+            <option value="Opcio1">Opció 1</option>
+            <option value="Opcio2">Opció 2</option>
+            <option value="Opcio3">Opció 3</option>
+        </select><br>
+
+        <br>
+
+        <label for="missatge">Missatge: </label>
+        <textarea id="missatge" name="missatge" rows="4" required></textarea><br>
+
+        <br>
+
+        <input type="submit" id="enviar" value="Enviar">
+    </form>
+</body>
 </html>
