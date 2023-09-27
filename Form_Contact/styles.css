@@ -1,0 +1,12 @@
+html {
+    text-align: center;
+}
+form {
+  /* Centrar el formulario en la pàgina */
+  margin: 0 auto;
+  width: 400px;
+  /* Esquema del formulari */
+  padding: 1em;
+  border: 1px solid #ccc;
+  border-radius: 1em;
+}
