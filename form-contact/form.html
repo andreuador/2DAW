@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Contacte</title>
+        <meta charset="utf-8">
+        <script src="script.js"></script>
+        <style>
+            html {
+                text-align: center;
+                font-family: arial;
+            }
+            form {
+                /* Centrar el formulario en la pàgina */
+                margin: 0 auto;
+                width: 400px;
+                /* Esquema del formulari */
+                padding: 1em;
+                border: 1px solid #ccc;
+                border-radius: 1em;
+            }               
+        </style>
+    </head>
+    <body>
+        <div>
+            <h1>CONTACTE</h1>
+        </div>
+        <form id="form-control">
+            <label for="nom">Nom </label>
+            <input type="text" id="nom" name="nom" placeholder="Nom*" required>
+
+            <br><br>
+
+            <label for="email">Email </label>
+            <input type="email" id="email" name="email" placeholder="Email*" required>
+            
+            <br><br>
+
+            <label for="Consulta">Motiu de la consulta</label>
+            <select name="Motiu de la consulta" id="motiu" required>
+                <option disabled selected value="">Motiu de la consulta</option>
+                <option>Incidències transport</option>
+                <option>Ventes i/o altra informació</option>
+                <option>Garantia</option>
+            </select>
+
+            <br><br>
+
+            <label for="comanda">Nº de comanda </label>
+            <input type="text" id="comanda" name="comanda" placeholder="Comanda*" required>
+
+            <br><br>
+
+            <label for="assumpte">Assumpte</label>
+            <input type="text" id="assumpte" name="assumpte" placeholder="Assumpte*" required>
+
+            <br><br>
+
+            <label for="Missatge">Missatge </label>
+            <textarea id="missatge" name="missatge" placeholder="Missatge" required></textarea>
+
+            <br><br>
+
+            <input type="submit" id="submit">
+        </form>
+    </body>
+</html>
