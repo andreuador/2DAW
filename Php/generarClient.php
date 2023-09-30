@@ -28,7 +28,10 @@
         <p><?php echo "<strong>DNI:</strong> " . $client->generarDNI(); ?></p>
         <p><?php echo "<strong>Direcció:</strong> " . $client->generarDireccio(); ?></p>
         <p><?php echo "<strong>Targeta:</strong> " . $client->generarTargeta(); ?></p>
-        <p><a href="generarFactura.php">Factura</a></p>
+            <div>
+                <p><a href="generarComanda.php">Comanda</p>
+                <p><a href="generarFactura.php">Factura</a></p>
+            </div>
         </div>
     </body>
 </html>

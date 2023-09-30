@@ -7,7 +7,7 @@
         public function __construct() {
             $this->vehicles = ["Ferrari", "Aston Martin", "Bugatti", "Mclaren", "Bentley"];
             $this->codiComanda = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-            $this->estat = ["Nou", "Seminou"];
+            $this->estat = ["Nou", "Seminou", "Ocasió"];
         }
 
         public function afegirVehicles(): string {
