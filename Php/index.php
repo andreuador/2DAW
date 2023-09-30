@@ -6,10 +6,10 @@
     </head>
     <body>
         <h1>BHEC</h1>
-        <nav>
-            <li><a href="generarFactura.php">Client</a></li>
+        <div>
+            <li><a href="index.php">Inici</a></li>
+            <li><a href="generarClient.php">Client</a></li>
             <li><a href="cataleg.php">Catàleg</a></li>
-            <!--<li><a href="especificacions.php">Especificacions</a></li>-->
-        </nav>
+        </div>
     </body>
 </html>

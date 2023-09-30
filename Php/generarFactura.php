@@ -6,21 +6,26 @@
     </head>
     <body>
         <?php
-        ini_set("display_errors", "on");
-        require 'Factura.php';
-        $factura = new Factura();
+            ini_set("display_errors", "on");
+            require 'Factura.php';
+            $factura = new Factura();
 
-        $preu = $factura->generarPreu();
-        $producte = $factura->generarProducte();
-        $cantitat = $factura->generarCantitat();
-        $numFactura = $factura->generarNumFactura();
-        $total = $factura->calcularTotal($preu, $cantitat);
-        $data = $factura->generarDataActual();
-        $client = $factura->posarClient();
-        $remitent = $factura->posarRemitent();
+            $preu = $factura->generarPreu();
+            $producte = $factura->generarProducte();
+            $cantitat = $factura->generarCantitat();
+            $numFactura = $factura->generarNumFactura();
+            $total = $factura->calcularTotal($preu, $cantitat);
+            $data = $factura->generarDataActual();
+            $client = $factura->posarProveidor();
+            $remitent = $factura->posarClient();
         ?>
 
         <h1>FACTURA</h1>
+        <div>
+            <li><a href="index.php">Inici</a></li>
+            <li><a href="generarClient.php">Client</a></li>
+            <li><a href="cataleg.php">Catàleg</a></li>
+        </div>
 
         <p><strong>Nº Factura: </strong><?php echo $numFactura ?></p>
 

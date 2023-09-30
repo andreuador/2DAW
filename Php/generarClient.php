@@ -12,31 +12,23 @@
             require 'Client.php';
             $client = new Client(); 
         ?>
+
+        <h1>CLIENT</h1>
         <div>
-            <button onclick="desplegar()">Usuario</button>
-            <div id="enlaces" style="display: none;">
-            <a href="./generarcliente.php">Información Usuario</a><br>
-            <a href="./cataleg.php">Cataleg</a><br>
-            <a href="./carrito.php">Carrito</a><br>
-            </div>
+            <ul>
+                <li><a href="index.php">Inici</a></li>
+                <li><a href="generarClient.php">Client</a></li>
+                <li><a href="cataleg.php">Cataleg</a></li>
+            </ul>
         </div>
         
-        <p><?php echo "Nombre:". $client->generarNom() ?></p>
-        <p><?php echo "Usuario:".$client->generarUsuari() ?></p>
-        <p><?php echo "Email:".$client->generarEmail() ?></p>
-        <p><?php echo "DNI:".$client->generarDNI() ?></p>
-        <p><?php echo "Direcció:".$client->generarDireccio() ?></p>
-        <p><?php echo "Targeta:".$client->generarTargeta() ?></p>
-    
-        <script>
-        function desplegar() {
-            var x = document.getElementById("enlaces");
-            if (x.style.display === "none") {
-            x.style.display = "block";
-            } else {
-            x.style.display = "none";
-            }
-        }
-      </script>
+        <p><?php echo "<strong>Nombre:</strong> " . $client->generarNom(); ?></p>
+        <p><?php echo "<strong>Usuario:</strong> " . $client->generarUsuari(); ?></p>
+        <p><?php echo "<strong>Email:</strong> " . $client->generarEmail(); ?></p>
+        <p><?php echo "<strong>DNI:</strong> " . $client->generarDNI(); ?></p>
+        <p><?php echo "<strong>Direcció:</strong> " . $client->generarDireccio(); ?></p>
+        <p><?php echo "<strong>Targeta:</strong> " . $client->generarTargeta(); ?></p>
+        <p><a href="generarFactura.php">Factura</a></p>
+        </div>
     </body>
 </html>

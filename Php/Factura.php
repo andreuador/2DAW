@@ -1,7 +1,7 @@
 <?php
     class Factura {
-        private string $client;
-        private string $remitent;
+        private array $proveidor;
+        private array $client;
         private DateTime $data;
         private array $numFactura;
         private array $preu;
@@ -9,8 +9,8 @@
         private array $cantitat;
 
         public function __construct() {
-            $this->client = "Juan Jose Lopes";
-            $this->remitent = "Jesus de Barqueta";
+            $this->proveidor = ["Audi, S.A", "Ford, S.A", "Ferrari, S.A", "Koenigsegg, S.A"];
+            $this->client = ["Jesus de Barqueta", "Pepe Marti", "Julian Alvarez"];
             $this->data = new DateTime();
             $this->numFactura = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
             $this->preu = [100000, 500000, 900000, 100000000, 500000000];
@@ -18,19 +18,22 @@
             $this->cantitat = [1, 2, 3, 4];
         }
 
+        // Funció que indica qui es el client
+        public function posarProveidor(): string {
+            return $this->proveidor[array_rand($this->proveidor)];
+        }
 
+        // Funció que indica qui es el remitent
         public function posarClient(): string {
-            return $this->client;
+            return $this->client[array_rand($this->client)];
         }
 
-        public function posarRemitent(): string {
-            return $this->remitent;
-        }
-
+        // Funció per a generar un preu aleatori
         public function generarPreu() : int {
             return $this->preu[array_rand($this->preu)];
         }
 
+        // Funció per a generar un producte aleatori
         public function generarProducte(): string {
             return $this->producte[array_rand($this->producte)];
         }
