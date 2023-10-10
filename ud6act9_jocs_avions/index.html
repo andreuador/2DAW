@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Javi Signes" />
+    <title>Red Plane</title>
+    <script src="js/scripts.js"></script>
+    <link rel="stylesheet" href="css/estils.css" />
+</head>
+
+<body onload="docReady()">
+    <header>
+        <div class="marcador">
+            <p>0 pt</p>
+        </div>
+    </header>
+    <main>
+        <!-- avió -->
+        <div id="avio">
+            <img src="img/avio.png">
+        </div>
+
+        <div>
+            <ul class="nivells">
+                <li id="ajudaBtn">Ajuda</li>
+                <li>Nivell 1</li>
+                <li>Nivell 2</li>
+            </ul>
+        </div>
+
+        <div id="ajudaModal" class="modal">
+            <div class="modal-contingut">
+                <span class="tancar" onclick="tancarModal()">&times;</span>
+                <p>AJUDA: </p>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
