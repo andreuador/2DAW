@@ -143,3 +143,11 @@ function docReady() {
   window.addEventListener("keydown", moureAvio);
   window.addEventListener("keyup", pararAvio);
 }
+
+function mapaNivell1() {
+  document.getElementById("body").style.backgroundImage = 'url("fons_nivells/nivell1.jpg")';
+}
+
+function mapaNivell2() {
+  document.getElementById("body").style.backgroundImage = 'url("fons_nivells/nivell2.jpg")';
+}
