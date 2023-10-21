@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    background-image: radial-gradient( 80vw circle at 50% 10%, #3a2099 17%, #480c59 100% );
+    background-size: 100%;
+    background-repeat: no-repeat;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+body {
+    background-image: url("../img/confeti.svg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+header {
+   background-color: #151617;
+}
+
+/* Estils per al logo i el titol */
+#logo {
+    display: flex;
+    align-items: center;
+}
+
+#logo>img {
+    width:35px;
+    margin: 8px 5px 0 15px;
+}
+
+#logo>h2 {
+    font-size: 15.5px;
+    margin: 5px 0px 0px 5px;
+    color: white;
+}
+
+/* Estils per al menú */
+#menu{
+    display: flex;
+    flex-direction: row;
+    padding: 18px;
+}
+
+#menu>li {
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+    list-style: none;
+}
+
+#menu>li:hover {
+    text-decoration: none;
+}
+
+#plugin {
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+#assitencia {
+    display: flex;
+    align-items: center;
+    color: white;
+}
