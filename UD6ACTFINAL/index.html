@@ -13,121 +13,111 @@
             <div class="contanier">
                 <div class="row">
                     <div class="col-6">
-                        <span id="logo">
-                            <img src="img/icona_escut.svg">
+                        <div class="logo">
+                            <img src="img/icona_escut.svg" class="imgEscut">
                             <h2>2onDAW-DI</h2>
-                        </span>
+                        </div>
                     </div>
                     <div class="col-6">
-                        <ul id="menu">
-                            <li>Serveis</li>
-                            <li>Assistència</li>
-                            <li>API</li>
-                            <li>Comunitat</li>
-                            <li>Xat</li>
-                        </ul>
+                        <nav>
+                            <ul id="menu">
+                                <li><a href="#serveis">Serveis</a></li>
+                                <li><a href="#assistencia">Assistència</a></li>
+                                <li><a href="#api">API</a></li>
+                                <li><a href="#comunitat">Comunitat</a></li>
+                                <li><a href="#xat">Xat</a></li>
+                            </ul>
+                        </nav>
                     </div>
                 </div>
             </div>
         </header>
-
+    
         <main id="primer">
             <!-- Titol i descripció pàgina -->
             <div class="container">
                 <div class="row">
-                    <div class="col-12">
-                        <h1 id="titol">
-                            Creem dissenys divertits
-                        </h1>
-                        <p id="descripcio">
-                            Aquesta pàgina web té molts elements. En ella podem veure des de gradients amb fons, icones, transicions, 
-                            mescles de color, tipografies i moltes coses més!
-                        </p>
+                    <div class="col-2"></div>
+                    <div class="col-8">
+                        <h1 class="titolDisseny">Creem dissenys divertits</h1>
+                        <p class="descripcio">Aquesta pàgina web té molts elements. En ella podem veure des de gradients amb
+                            fons, icones, transicions,
+                            mescles de color, tipografies i moltes coses més!</p>
                     </div>
+                    <div class="col-2"></div>
                 </div>
             </div>
-
+    
             <!-- Plug-in i Assitència -->
             <div class="container">
                 <div class="row">
-                    <!-- Columna 1: Plug-ins -->
                     <div class="col-6">
-                        <div class="content-plugin">
-                            <span id="plugin">
-                                <img src="img/icona_plugin.svg">
-                                <h2>Plug-ins</h2>
-                            </span>
-                            <p>Amplia la funcionalitat del teu Visual Studio Code mitjançant noves formes personals i la utilització de generadors automàtics
+                        <div id="plugin" class="caixes">
+                            <img src="img/icona_plugin.svg">
+                            <h2>Plug-ins</h2>
+                            <p class="descripcioPlugin">Amplia la funcionalitat del teu Visual Studio Code mitjançant noves
+                                formes personals i la
+                                utilització de generadors automàtics
                                 de codi per a fer plantilles web apropiades al nivell d'un alumne de 2on de DAW.
                             </p>
-                            <p><a href="#documentacio_plugins">VEURE DOCUMENTACIÓ</a></p>
+                            <p class="documentacio">VEURE DOCUMENTACIÓ</p>
                         </div>
                     </div>
-            
-                    <!-- Columna 2: Assistència -->
                     <div class="col-6">
-                        <div class="content-assistencia">
-                            <span id="assitencia">
-                                <img src="img/icona_assistencia.svg">
-                                <h2>Assistència</h2>
-                            </span>
-                            <p>Molts alumnes han passat pels mateixos dubtes que has tingut tu. Mira abans en el fòrum si algú ho ha resolt
-                                abans. O si saps la reposta a algun dubte d'un company solucionar-li'l en el lloc apropiat del formulari.
+                        <div id="assistencia" class="caixes">
+                            <img src="img/icona_assistencia.svg">
+                            <h2>Assistència</h2>
+                            <p class="descripcioPlugin">
+                                Molts alumnes han passat pels mateixos dubtes que has tingut tu. Mira abans en el fòrum si
+                                algú
+                                ho ha resolt
+                                abans. O si saps la reposta a algun dubte d'un company solucionar-li'l en el lloc apropiat
+                                del
+                                formulari.
                             </p>
-                            <p><a href="#documentacio_assistencia">VEURE DOCUMENTACIÓ</a></p>
+                            <p class="documentacio">VEURE DOCUMENTACIÓ</p>
                         </div>
                     </div>
                 </div>
             </div>
-            
 
             <div class="container">
                 <div class="row">
                     <div class="col-4">
-                        <img src="img/icona_format_fitxer.svg">
-                        <h3>Format del fitxer <img src="img/icona_fletxa.svg"></h3>
-                        <p>Pots utilitar el mateix Visual Studio Code per codificar els teus anexos.</p>
+                        <div class="opcions">
+                            <img src="img/icona_format_fitxer.svg" class="imageFormat">
+                            <h3>Format del fitxer <img src="img/icona_fletxa.svg"></h3>
+                            <p class="descripcioOpcions">Pots utilitar el mateix Visual Studio per codificar els teus anexos.</p>
+                        </div>
                     </div>
                     <div class="col-4">
-                        <img src="img/icona_app.svg" width="50px">
-                        <h3>APP <img src="img/icona_fletxa.svg"></h3>
-                        <p>Integra el teu codi <span>daw://</span> en el repositori de GitHub.</p>
+                        <div class="opcions">
+                            <img src="img/icona_app.svg" class="imageFormat">
+                            <h3>APP <img src="img/icona_fletxa.svg"></h3>
+                            <p class="descripcioCodi">Integra el teu codi <span class="resaltat">daw://</span> en el repositori de GitHub.</p>
+                        </div>
                     </div>
                     <div class="col-4">
-                        <img src="img/icona_preferencies.svg">
-                        <h3>API <img src="img/icona_fletxa.svg"></h3>
-                        <p>Pots usar JSON per a interactuar amb la nostra plataforma.</p>
+                        <div class="opcions">
+                            <img src="img/icona_preferencies.svg" class="imageFormat">
+                            <h3>API <img src="img/icona_fletxa.svg"></h3>
+                            <p class="descripcioApi">Pots usar JSON per a interactuar amb la nostra plataforma.</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </main>
 
-        <main id="segon">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <h1>Arranquem</h1>
-                    </div>
-                </div>
-            </div>
-
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <h3>Maquetem la web</h3>
-                    </div>
-                </div>
-            </div>
-
+        <main>
             <div class="container">
                 <div class="row">
                     <div class="col-2"></div>
-
                     <div class="col-8">
-                        <p>
-                            En primer lloc has d'obrir l'entorn de desenvolupament preferit (Visual Studio Code, Php Storm o el que siga). Després has d'obrir
-                            un nou fitxer i emmagatzemar-lo com a html. El codi de baix mostra com fer la maquetació del primer <em>"Hola món"</em> &#x1F44B;.
-                        </p>
+                        <h1 class="titolArranquem">Arranquem</h1>
+                        <h3 class="titolMaquetar">Maquetem la web</h3>
+                        <p>En primer lloc has d'obrir l'entorn de desenvolupament preferit (Visual Studio, Php Storm o el que siga). 
+                        Després has d'obrir un nou fitxer i emmagatzemar-lo com a html. El codi de baix mostra com fer la maquetació del primer "Hola món"  &#x1F44B;.</p>
+
                         <ol>
                             <li>
                                 <p>Obri l'editor</p>
@@ -141,19 +131,17 @@
                             </li>
                             <li>
                                 <p>Obri la pàgina en un navegador</p>
+                                <pre class="hola">
+                                    <p>&ltdiv class="container"&gt&lt/div&gt</p>
+                                    <p>       &ltdiv class="row"></p>
+                                    <p>            &ltdiv class="col-12"></p>
+                                    <p>                   Hola món!</p>
+                                    <p>            &lt/div></p>
+                                    <p>       &lt/div></p>
+                                    <p>&lt/div></p>
+                                </pre>
                             </li>
                         </ol>
-                    </div>
-
-                    <div class="col-2"></div>
-                </div>
-            </div>
-
-            <div class="container">
-                <div class="row">
-                    <div class="col-2"></div>
-
-                    <div class="col-8">
                         <h3>Publicar la web</h3>
                         <p>
                             Per publicar a la web és relativament senzill. Has d'utilitzar un client ftp com el <span>filezilla</span> i configurar-lo per accedir al teu hosting.
@@ -164,7 +152,6 @@
                             Veus alguna cosa incorrecta o incompleta en aquesta pàgina? Ajuda'ns a millorar.
                         </p>
                     </div>
-
                     <div class="col-2"></div>
                 </div>
             </div>
@@ -173,38 +160,22 @@
         <main id="tercer">
             <div class="container">
                 <div class="row">
-                    <div class="col-12">
-                        <p>
-                            No desenvolupes planes web?
-                        </p>
-                        <p>
-                            Dona'ns idees
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <p>
-                            Si no tens molta destresa programant <span>deixa'ns una suggerència</span> per millorar la nostra formació.
-                        </p>
-                        <p>
-                            Fes una ullada <span>a la nostra llista</span> de coses que ja hem desenvoluopat.
-                        </p>
+                    <div class="col-2"></div>
+                    <div class="col-8">
+                        <h1>No desenvolupes planes web? Dona'ns idees</h1>
+                        <p>Si no tens molta destresa programant <span style="color: #fa6400;">deixa'ns una suggerència</span> per millorar la nostra formació.</p>
+                        <p>Fes una ullada <span style="color: #fa6400;">a la nostra llista</span> de coses que ja hem desenvolupat.</p>
                     </div>
                 </div>
             </div>
         </main>
 
-        <main id="quart">
+        <main>
             <div class="container">
                 <div class="row">
-                    <div class="col-12">
-                        <h1>
-                            Estem per ajudar-te
-                        </h1>
+                    <div class="col-2"></div>
+                    <div class="col-8">
+                        <h1>Estem per ajudar-te</h1>
                     </div>
                 </div>
             </div>
@@ -246,27 +217,18 @@
             <div class="container">
                 <div class="row">
                     <div class="col-6">
-                        <p>
-                            &copy; 202X Disseny interfícies web
-                        </p>
+                        <p>&copy; 202X Disseny interfícies web</p>
                     </div>
-
                     <div class="col-6">
-                        <ul>
+                        <ul class="xarxes">
                             <li>
-                                <p>
-                                    GitHub
-                                </p>
+                                <p>GitHub</p>
                             </li>
                             <li>
-                                <p>
-                                    Facebook
-                                </p>
+                                <p>Facebook</p>
                             </li>
                             <li>
-                                <p>
-                                    Twitter
-                                </p>
+                                <p>Twitter</p>
                             </li>
                         </ul>
                     </div>
