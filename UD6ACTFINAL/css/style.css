@@ -15,9 +15,7 @@ html {
     background-repeat: no-repeat;
 }
 
-#tercer {
-    background-color: #151617;
-}
+
 
 header {
    background-color: #151617;
@@ -138,8 +136,20 @@ header {
     list-style: none;
 }
 
+/* Tercer main */
+
+#tercer {
+    background-color: #151617;
+    color: white;
+}
+
+#tercer h1 {
+    font-size: 60px;
+}
+
 .resaltat {
     font-size: 12px;
+    font-family: 'Source Code Pro', monospace;
     padding: 5px;
     border-radius: 5px;
     background-color: rgba(0, 0, 0, 0.247);
