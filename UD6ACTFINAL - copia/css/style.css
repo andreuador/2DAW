@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+header {
+    background-color: #151617;
+    color: white;
+}
+
+#primer {
+    background-image: url("../img/confeti.svg"), radial-gradient( 80vw circle at 50% 10%, #3a2099 17%, #480c59 100% );
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+#tercer {
+    background-color: #151617;
+    color: white;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.imageEscut {
+    width:35px;
+    margin: 8px 5px 5px 15px; /* margin-bottom: 0; */
+}
+
+.titol {
+    font-size: 15.5px;
+    margin: 2px 0px 0px 5px;
+    color: white;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    font-weight: bold;
+    font-size: 14px;  
+}
+
+.menu>li>a {
+    text-decoration: none;
+    color: white;
+}
+
+.titolDisseny {
+    text-align: center;
+    color: white;
+    font-size: 63px;
+    margin-top: 145px;
+}
+
+.descripcio {
+    color: white;
+    text-align: center;
+    font-size: 28px;
+}
+
+.imagePlugin, .imageAssistencia {
+    float: left;
+}
+
+.plugin {
+    background-image: linear-gradient( 153deg, #e64c4c 0%, #fb8332 95%);
+}
+
+.assistencia {
+    background-image: linear-gradient(153deg, #da6bf8 0%, #815eff 95%);
+}
+
+.titolPluginAssistencia {
+    color: white;
+    margin: 10px;
+}
+
+.descripcioPluginAssistencia {
+    text-align: center;
+    color: white;
+}
+
+.imageApp {
+    width: 50px;
+}
+
+.xarxes {
+    list-style: none;
+}

@@ -1,20 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+
 * {
     margin: 0;
     box-sizing: border-box;
 }
 
 html {
-    background-image: radial-gradient( 80vw circle at 50% 10%, #3a2099 17%, #480c59 100% );
-    background-size: 100%;
-    background-repeat: no-repeat;
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Ubuntu', serif;
 }
 
-body {
-    background-image: url("../img/confeti.svg");
+#primer {
+    background-image: url("../img/confeti.svg"), radial-gradient( 80vw circle at 50% 10%, #3a2099 17%, #480c59 100% );
     background-size: 100%;
     background-repeat: no-repeat;
+}
+
+#tercer {
+    background-color: #151617;
+    color: white;
+    text-align: center;
 }
 
 header {
@@ -41,8 +45,9 @@ header {
 /* Estils per al menú */
 #menu{
     display: flex;
-    flex-direction: row;
-    padding: 18px;
+    justify-content: space-around;
+    margin: 18px 10px 10px 50px;
+    padding: 0 20px 8px 20px;
 }
 
 #menu>li {
@@ -56,14 +61,48 @@ header {
     text-decoration: none;
 }
 
-#plugin {
-    display: flex;
-    align-items: center;
+/* Estils titol i descripcio */
+#titol {
+    font-size: 65px;
     color: white;
+    text-align: center;
+    margin-top: 110px;
+    margin-bottom: 0;
+    padding: 30px;
 }
 
-#assitencia {
-    display: flex;
-    align-items: center;
+#descripcio {
+    text-align: center;
     color: white;
+    font-size: 28px;
+    margin: 0 90px 20px 90px;
+}
+
+/* Estils plugin i assistencia */
+#plugin, #assitencia {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.content-plugin {
+    background-image: linear-gradient( 153deg, #e64c4c 0%, #fb8332 95%);
+    text-align: center;
+    color: white;
+    padding: 92.5px;
+    margin-bottom: 45px;
+}
+
+.content-plugin p a {
+    margin: 30px;
+}
+
+#plugin h2, #assitencia h2 {
+    margin: 10px;
+}
+
+.content-assistencia {
+    background-image: linear-gradient(153deg, #da6bf8 0%, #815eff 95%);
+    text-align: center;
+    color: white;
+    padding: 92.5px;
 }
