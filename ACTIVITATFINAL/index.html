@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/grid.css">
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+    <header>
+        <div class="contanier">
+            <div class="row">
+                <div class="col-6">
+                    <div class="logo">
+                        <img src="img/icona_escut.svg" class="imgEscut">
+                        <h2>2onDAW-DI</h2>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <nav class="nav-header">
+                        <ul>
+                            <li><a href="#serveis">Serveis</a></li>
+                            <li><a href="#assistencia">Assistència</a></li>
+                            <li><a href="#api">API</a></li>
+                            <li><a href="#comunitat">Comunitat</a></li>
+                            <li><a href="#xat">Xat</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main id="primer">
+        <!-- Titol i descripció pàgina -->
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="titol">
+                        <h1 class="titolDisseny">Creem dissenys divertits</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <!--<div class="col-1"></div>-->
+                <div class="col-12">
+                    <!--<div class="titol">-->
+                    <div class="descripcio">
+                        <p>Aquesta pàgina web té molts elements. En ella podem veure des de gradients amb
+                            fons, icones, transicions,
+                            mescles de color, tipografies i moltes coses més!</p>
+                    </div>
+                </div>
+                <!--<div class="col-1"></div>-->
+            </div>
+        </div>
+
+        <!-- Plug-in i Assitència -->
+        <div class="container">
+            <div class="row">
+                <div class="col-6">
+                    <div id="plugin" class="div-plugin-assistencia">
+                        <img src="img/icona_plugin.svg">
+                        <h2>Plug-ins</h2>
+                        <p class="descripcioPluginAssistencia">
+                            Amplia la funcionalitat del teu Visual Studio Code mitjançant noves formes personals i la
+                            utilització de generadors automàtics
+                            de codi per a fer plantilles web apropiades al nivell d'un alumne de 2on de DAW.
+                        </p>
+                        <p class="documentacio">VEURE DOCUMENTACIÓ</p>
+                    </div>
+                </div>
+
+                <div class="col-6">
+                    <div id="assistencia" class="div-plugin-assistencia">
+                        <img src="img/icona_assistencia.svg">
+                        <h2>Assistència</h2>
+                        <p class="descripcioPluginAssistencia">Molts alumnes han passat pels mateixos dubtes que has
+                            tingut tu. Mira abans en el fòrum si algú
+                            ho ha resolt abans. O si saps la reposta a algun dubte d'un company soluciona-li'l en el
+                            lloc apropiat del
+                            formulari.
+                        </p>
+                        <p class="documentacio">VEURE DOCUMENTACIÓ</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-4 div-icons-info">
+                    <img src="img/icona_format_fitxer.svg">
+                    <h2>Format del fitxer <img src="img/icona_fletxa.svg"></h2>
+                    <p>Pots utilitar el mateix Visual Studio per codificar els teus anexos.</p>
+                </div>
+                <div class="col-4 div-icons-info">
+                    <img src="img/icona_app.svg" width="50px">
+                    <h2>APP <img src="img/icona_fletxa.svg"></h2>
+                    <p>Integra el teu codi <span class="resaltat">daw://</span> en el repositori de GitHub.</p>
+                </div>
+                <div class="col-4 div-icons-info">
+                    <img src="img/icona_preferencies.svg">
+                    <h2>API <img src="img/icona_fletxa.svg"></h2>
+                    <p>Pots usar JSON per a interactuar amb la nostra plataforma.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <main>
+        <div class="container">
+            <div class="row">
+                <div class="col-2"></div>
+
+                <div class="col-8">
+                    <div class="arranquem">
+                        <h1>Arranquem</h1>
+                        <h2>Maquetem la web</h2>
+                        <p>
+                            En primer lloc has d'obrir l'entorn de desenvolupament preferit (Visual Studio Code, Php
+                            Storm o el que siga). Després has d'obrir
+                            un nou fitxer i emmagatzemar-lo com a html. El codi de baix mostra com fer la maquetació del
+                            primer <em>"Hola món"</em> &#x1F44B;.
+                        </p>
+                        <ol>
+                            <li>
+                                <p>Obri l'editor</p>
+                            </li>
+                            <li>
+                                <p>Crea un nou fitxer html. En Visual Studio Code és amb les tecles <span class="resaltat">ctrl + n</span>
+                                </p>
+                                <img src="img/file_new.png" class="file">
+                            </li>
+                            <li>
+                                <p>Copia i pega el codi de baix</p>
+                            </li>
+                            <li>
+                                <p>Obri la pàgina en un navegador</p>
+                                <pre>
+                                    <p>&lt<span class="codiDiv">div</span> class="<span class="codi">container</span>"&gt</p>
+                                    <p>       &lt<span class="codiDiv">div</span> class="<span class="codi">row</span>"></p>
+                                    <p>            &lt<span class="codiDiv">div</span> class="<span class="codi">col-12</span>"></p>
+                                    <p>                   Hola món &#x1F44B;!</p>
+                                    <p>            &lt/<span class="codiDiv">div</span>></p>
+                                    <p>       &lt/<span class="codiDiv">div</span>></p>
+                                    <p>&lt/<span class="codiDiv">div</span>></p>
+                                </pre>
+                            </li>
+                        </ol>
+                        <h2 id="publicar">Publicar la web</h2>
+                        <p>
+                            Per publicar a la web és relativament senzill. Has d'utilitzar un client ftp com el
+                            <span class="resaltat">filezilla</span> i configurar-lo per accedir al teu <span class="color"><a href="#">hosting</a></span>.
+                            Una vegada configurat només has de pujar els fitxers o ja està!!!
+                        </p>
+
+                        <p id="millorar">
+                            Veus alguna cosa incorrecta o incompleta en aquesta pàgina? <span class="color"><a href="#">Ajuda'ns a millorar</a></span>.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-2"></div>
+            </div>
+        </div>
+    </main>
+
+    <main id="tercer">
+        <div class="container">
+            <div class="row">
+                <div class="col-2"></div>
+                <div class="col-8">
+                    <h1>No desenvolupes planes web? Dona'ns idees</h1>
+                </div>
+                <div class="col-2"></div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <p>Si no tens molta destresa programant <span class="color"><a href="#">deixa'ns una suggerència</a></span> per millorar la nostra formació.</p>
+                    <p>Fes una ullada <span class="color"><a href="#">a la nostra llista</a></span> de coses que ja hem desenvoluopat.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <main id="quart">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="ajudar">Estem per ajudar-te</h1>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-4">
+                    <div class="div-icons-ajudar">
+                        <img src="img/icona_forum.svg">
+                        <h2>Comunitat <img src="img/icona_fletxa_negra.svg"></h2>
+                        <p class="comunitat">Uneix-te a la nostra comunitat i comenta els teus dubtes.</p>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="div-icons-ajudar">
+                        <img src="img/icona_exemples.svg">
+                        <h2>Exemples <img src="img/icona_fletxa_negra.svg"></h2>
+                        <p class="exemples">Mira els exemples que han realitzat altres estudiants.</p>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="div-icons-ajudar">
+                        <img src="img/icona_chat.svg">
+                        <h2>Xat <img src="img/icona_fletxa_negra.svg"></h2>
+                        <p class="xat">Contacta amb el nostre xat i et donarem suport instantani.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="cookies">
+            <p>Usem cookies pròpies i de tercers per millorar els nostres serveis. Si continues
+                navegant en aquesta pàgina, acceptes la nostra <span class="color"><a href="#">política de cookies</a></span>.</p>
+            <img src="img/icona_creu.svg" onclick="tancar()">
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-6">
+                    <div class="copy">
+                        <p>&copy; 202X Disseny interfícies web</p>
+                    </div>
+                </div>
+
+                <div class="col-6">
+                    <ul class="llista-xarxes">
+                        <li>
+                            <p><a href="#">GitHub</a></p>
+                        </li>
+                        <li>
+                            <p><a href="#">Facebook</a></p>
+                        </li>
+                        <li>
+                            <p><a href="#">Twitter</a></p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+<script>
+    function tancar() {
+        document.getElementById("cookies").style.display = "none";
+    }
+</script>
+
+</html>

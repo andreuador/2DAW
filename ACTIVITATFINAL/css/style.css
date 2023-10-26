@@ -1,0 +1,394 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200&display=swap');
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Ubuntu, system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+html {
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+/* Header */
+
+header {
+   background-color: #151617;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo>h2 {
+    font-size: 16px;
+    margin: 7px 5px 5px 5px;
+    color: white;
+}
+
+.imgEscut {
+    width:35px;
+    margin: 8px 5px 2px 15px;
+}
+
+.nav-header {
+    height: 100%;
+}
+
+.nav-header>ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    padding-right: 70px;
+}
+
+.nav-header>ul>li {
+    list-style: none;
+}
+
+.nav-header>ul>li>a {
+    text-decoration: none;
+    color:white;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.nav-header>ul>li>a:hover {
+    color: #dc702b;
+}
+
+/* Primer main */
+
+#primer {
+    background-image: url("../img/confeti.svg"), radial-gradient( 80vw circle at 50% 10%, #3a2099 17%, #480c59 100% );
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.titol {
+    color: white;
+    text-align: center;
+    font-weight: bold;
+}
+
+.titolDisseny {
+    font-size: 63px;
+    padding: 105px 0 0 0;
+}
+
+.descripcio {
+    text-align: center;
+    font-size: 27.5px;
+    color: white;
+}
+
+#plugin {
+    background-image: linear-gradient( 153deg, #e64c4c 0%, #fb8332 95%);
+    width: 100%;
+}
+
+#assistencia {
+    background-image: linear-gradient(153deg, #da6bf8 0%, #815eff 95%);
+    width: 100%;
+}
+
+.div-plugin-assistencia {
+    border-radius: 10px;
+    padding: 50px 30px 20px;
+    margin-top: 50px;
+    color: white;
+}
+
+.div-plugin-assistencia:hover {
+    opacity: 0.8;
+}
+
+.div-plugin-assistencia>img {
+    float: left;
+    padding: 8px 5px;
+}
+
+.div-plugin-assistencia>h2 {
+    padding: 0 0 0 65px;
+    font-size: 42px;
+    margin: 6px 0;
+}
+
+.descripcioPluginAssistencia {
+    font-size: 16.5px;
+    padding: 26px 0 0 65px;
+    line-height: 24px;
+}
+
+.documentacio {
+    padding: 35px 65px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+
+.div-icons-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 15px;
+    color: white;
+    font-weight: bold;
+}
+
+.div-icons-info:hover {
+    opacity: 0.5;
+}
+
+.div-icons-info>img {
+    padding: 45px 0 0 0;
+}
+
+.div-icons-info>h2 {
+    font-size: 25.5px;
+    padding: 8px 5px 0 2px;
+}
+
+.div-icons-info>p {
+    font-size: 16.5px;
+    line-height: 20px;
+    padding-top: 5px;
+    padding-bottom: 70px;
+}
+
+/* Segon main */
+
+.arranquem>h1 {
+    text-align: center;
+    padding-top: 82px;
+    font-size: 41.5px;
+}
+
+.arranquem>h2 {
+    padding-top: 23px;
+    font-size: 25px;
+}
+
+.arranquem>p {
+    font-size: 16.5px;
+    padding: 15px 0 0 0;
+    line-height: 27px;
+}
+
+.arranquem>ol {
+    padding: 0 0 0 40px;
+    line-height: 30px;
+}
+
+#publicar {
+    padding: 74px 0 0 0;
+    font-size: 25.col-1px;
+}
+
+.file {
+    padding: 10px 0 0 0;
+}
+
+pre {
+    border: 1px solid rgb(219, 219, 219);
+    border-radius: 5px;
+    line-height: 0px;
+    background-color: rgb(245, 245, 245);
+    margin: 28.8px 0px 0px 0px;
+    padding: 15px 0 15px 0;
+}
+
+pre>p {
+    font-size: 14.4px;
+    line-height: 20.8px;
+}
+
+#millorar {
+    font-size: 13px;
+    margin: 80px 0 45px 0;
+    border-radius: 5px;
+    padding: 15px 15px 15px 16px;
+    border: 1px solid rgb(199, 199, 199);
+}
+
+/* Span */
+
+.resaltat {
+    font-family: 'Source Code Pro', monospace;
+    font-size: 13px;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.247);
+}
+
+.color {
+    padding: 0;
+}
+
+.color>a {
+    color: #fa6400;
+    text-decoration: none;
+}
+
+.color>a:hover {
+    color: #dd9264;
+}
+
+
+/* Tercer main */
+
+#tercer {
+    background-color: #151617;
+    text-align: center;
+    padding: 50px 0px 80px 0px;
+    margin-bottom: 80px;
+    color: white;
+}
+
+#tercer h1 {
+    font-size: 42.5px;
+    padding: 0px 0px 0px 5px;
+}
+
+#tercer p {
+    padding: 5px 158px 0px 160px;
+    font-size: 26.5px;
+    line-height: 36px;
+}
+
+/* Quart main */
+
+#quart {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.ajudar {
+    font-size: 41.5px;
+    padding: 16px 0px 0px 0px;
+}
+
+.div-icons-ajudar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 15px;
+    font-weight: bold;
+}
+
+.div-icons-ajudar>img {
+    padding: 5px 30px 0 0;
+}
+
+.div-icons-ajudar>h2 {
+    font-size: 26.5px;
+    padding: 6px 32px 0px 0px;
+}
+
+.div-icons-ajudar:hover {
+    opacity: 0.5;
+}
+
+.comunitat {
+    font-size: 15px;
+    line-height: 24px;
+    padding: 0px 30px 0px 0px;
+}
+
+.exemples {
+    padding: 0px 30px 0px 0px;
+    line-height: 23.5px;
+    font-size: 15px;
+}
+
+.xat {
+    font-size: 15px;
+    line-height: 23px;
+    padding: 0px 12px 0px 0px;
+}
+
+/* Footer */
+
+footer {
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.copy {
+    font-size: 12px;
+}
+
+.llista-xarxes {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 70px;
+    padding-right: 70px;
+    font-size: 13px;
+}
+
+.llista-xarxes>li>p>a {
+    text-decoration: none;
+    color: black;
+}
+
+.llista-xarxes>li>p>a:hover {
+    color: #dc702b;
+}
+
+/* Cookies */
+
+#cookies {
+    position: fixed;
+    border: 1px solid grey;
+    background: white;
+    border-radius: 80px;
+    width: 442px;
+    left: 380px;
+    padding: 20px 0px 0px 0px;
+    bottom: 0;
+    margin-bottom: 32px;
+}
+
+#cookies>p {
+    font-size: 14px;
+    text-align: justify;
+    line-height: 18.5px;
+    padding: 7px 55px 0px 21px;
+}
+
+#cookies>img {
+    width: 10px;
+    float: right;
+    margin: -45px 35px 0px 0px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#cookies>img:hover {
+	color: red;
+}
+
+#cookies>p>a {
+    text-decoration: none;
+    color: #fa6400;
+}
+
+/* Codi */
+
+.codiDiv {
+	color: #cc9e39;
+}
+
+.codi {
+	color: #e64c4c;
+}
