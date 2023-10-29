@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Validaciones(valid/invalid)</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <script src="js/script.js"></script>
+    
+</head>
+
+<body>
+    <form name="formulario">
+
+        <h2>Registro de Usuario</h2>
+
+        <div>
+            <label for="nombre">Nombre:</label>
+            <input type="text" name="nombre" pattern='^[a-zA-Z ]{0,25}$' id="nombre">
+        </div>
+        <div>
+            <label for="apellidos">Apellidos:</label>
+            <input type="text" name="apellidos" pattern='^[a-zA-Z ]{0,25}$' id="apellidos">
+        </div>
+        <div>
+            <label for="domicilio">Domicilio:</label>
+            <input type="text" name="domicilio" pattern='^[a-zA-Z ]{0,50}[0-9]{0,5}$' id="domicilio">
+        </div>
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" name="email" pattern='\b[\w\.-]+@[\w\.-]+\.\w{2,4}\b' id="email">
+        </div>
+        <div>
+            <label for="contraseña">Contraseña:</label>
+            <input type="password" name="contraseña" pattern='((?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[\W]).{8,})' id="contraseña">
+        </div>
+        <div>
+            <label for="confirmPass">Confirmar Contraseña:</label>
+            <input type="text" name="confirmPass" id="confirmPass" >
+        </div>
+        <div>
+            <label for="phone">Phone:</label>
+            <input type="tel" name="phone" pattern='^[0-9]{9}$' id="phone">
+        </div>
+        <div>
+            <label for="dni">DNI:</label>
+            <input type="text" name="dni" pattern='^[0-9]{8}[A-Za-z]$' id="dni">
+        </div>
+        <div>
+            <label for="razonSocial">Razon social:</label>
+            <input type="text" name="rs" pattern='^[a-zA-Z ]{0,25}$' id="rs">
+        </div>
+        <div class="form-buttons">
+            <button type="submit" name="submit">Enviar formulario</button>
+        </div>
+    </form>
+
+</body>
+</body
