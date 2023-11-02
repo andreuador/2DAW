@@ -18,17 +18,11 @@ class Validator {
     public function validateEmail(): void {
         if (empty($this->email)) {
             $this->errors[] = "El correo electrónico no puede estar vacío.";
-        } 
-    
-        elseif (!filter_var($this->email, FILTER_VALIDATE_EMAIL)) {
+        } elseif (!filter_var($this->email, FILTER_VALIDATE_EMAIL)) {
             $this->errors[] = "El formato del correo electrónico no es válido.";
-        } 
-        
-        elseif (strlen($this->email) > 20) {
+        } elseif (strlen($this->email) > 20) {
             $this->errors[] = "El correo electrónico no puede tener más de 20 caracteres.";
-        } 
-        
-        elseif (preg_match('/[áéíóúÁÉÍÓÚàèìòùÀÈÌÒÙäëïöüÄËÏÖÜ]/', $this->email)) {
+        } elseif (preg_match('/[áéíóúÁÉÍÓÚàèìòùÀÈÌÒÙäëïöüÄËÏÖÜ]/', $this->email)) {
             $this->errors[] = "El correo electrónico no puede contener acentos.";
         }
     }
@@ -36,12 +30,10 @@ class Validator {
     public function validatePassword(): void {
         if (empty($this->password)) {
             $this->errors[] = "La contraseña no puede estar vacía.";
-        } 
-        
-        elseif (strlen($this->password) < 8) {
+        } elseif (strlen($this->password) < 8) {
             $this->errors[] = "La contraseña debe tener al menos 8 caracteres.";
         }
-        
+
         // La contraseña debe contener 1 número (0-9).
         // La contraseña debe contener 1 letra mayúscula.
         // La contraseña debe contener 1 letra minúscula.

@@ -1,7 +1,6 @@
-html {
+body {
     font-family: Arial, sans-serif;
     background-color: #e7e7e9ff;
-    margin: 0;
 }
 
 .container {
@@ -10,7 +9,7 @@ html {
     padding: 10px;
     border-radius: 10px;
     text-align: center;
-    background-color: white;
+    background-color: #ffffff;
 }
 
 .form-group {
