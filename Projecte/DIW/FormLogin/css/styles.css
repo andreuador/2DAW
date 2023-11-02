@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #e7e7e9ff;
+    font-size: 1rem;
+}
+
+header {
+    background-color: #181d33;
+    position: fixed;
+    right: 0;
+    left: 0;
+    width: 100%;
+    top: 0;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.img-logo-header {
+    width: 3.125rem;
+    margin: 0.9375rem 0 0.625rem 0;
+}
+
+.nav-header {
+    height: 100%;
+}
+
+.nav-header>ul {
+    display: flex;
+    justify-content: center;
+    gap: 3.125rem;
+}
+
+.nav-header>ul>li {
+    list-style: none;
+}
+
+.nav-header>ul>li>a {
+    color: #e7d381;
+    font-size: 1.25rem;
+    font-family: 'Playfair Display', serif;
+}
+
+a:hover {
+    opacity: 0.5;
+}
+
+.grup-icones>ul {
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+}
+
+.grup-icones>ul>li {
+    list-style: none;
+    margin: 1.25rem 0 0 0;
+}
+
+.grup-icones>ul>li>a>img {
+    width: 1.875rem;
+}
+
+.busqueda {
+    display: flex;
+    justify-content: center;
+    margin: 1.5625rem 0 0 0;
+}
+
+.barra-busqueda {
+    border-top-left-radius: 0.3125rem;
+    border-bottom-left-radius: 0.3125rem;
+    border: 0;
+    padding: 0rem 1.25rem 0.3125rem 1.25rem;
+    height: 100%;
+}
+
+.busqueda>button {
+    background-color: #aa8e31;
+    border-top-right-radius: 0.3125rem;
+    border-bottom-right-radius: 0.3125rem;
+    border: 0;
+}
+
+.busqueda>button>img {
+    width: 0.625rem;
+}
+
+/* Main */
+
+main {
+    font-family: 'Ubuntu', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    margin-top: 6.875rem;
+    margin-bottom: 9.375rem;
+}
+
+.login {
+    margin: 0 auto;
+    padding: 0.625rem;
+    border-radius: 0.625rem;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 1.25rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.3125rem;
+}
+
+input {
+    border: 0.125rem solid white;
+}
+
+#email,
+#password {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 0.125rem solid black;
+    border-radius: 0.3125rem;
+}
+
+#email:valid,
+#password:valid {
+    border-color: green;
+}
+
+#email:invalid,
+#password:invalid {
+    border-color: red;
+}
+
+#submit {
+    background-color: #e7d381ff;
+    color: white;
+    padding: 0.625rem 1.25rem;
+    border: none;
+    border-radius: 0.3125rem;
+    cursor: pointer;
+    margin: 0.9375rem 0;
+}
+
+#submit:hover {
+    background-color: #aa8e31ff;
+}
+
+.error-message {
+    color: red;
+}
+
+a {
+    color: black;
+}
+
+.suggestions-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    background-color: white;
+    border: 0.0625rem solid #ccc;
+    border-radius: 0.3125rem;
+    display: none;
+    text-align: left;
+}
+
+.suggestions-list li {
+    padding: 0.625rem;
+    cursor: pointer;
+}
+
+.suggestions-list li:hover {
+    background-color: #ddd;
+}
+
+.show {
+    display: block;
+}
+
+/* Footer */
+
+footer {
+    background-color: #181d33;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.25rem;
+}
+
+.logo-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0.9375rem;
+}
+
+.img-logo-footer {
+    width: 3.125rem;
+}
+
+.nav-footer {
+    height: 100%;
+}
+
+hr {
+    margin: 0.9375rem 1.875rem;
+}
+
+.nav-footer>ul {
+    display: flex;
+    justify-content: flex-start;
+    gap: 1.25rem;
+}
+
+.nav-footer>ul>li {
+    list-style: none;
+}
+
+.nav-footer>ul>li>a {
+    color: #e7d381;
+    font-size: 0.75rem;
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 6.25rem;
+}
+
+.nav-footer>ul>li>p {
+    color: #e7d381;
+}

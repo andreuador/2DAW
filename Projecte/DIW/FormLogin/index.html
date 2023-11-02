@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Iniciar Sesión</title>
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/grid.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <script src="js/main.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-4">
+                    <div class="logo">
+                        <img src="img/logoBHEC.png" class="img-logo-header">
+                        <nav class="nav-header">
+                            <ul>
+                                <li><a href="#cataleg">Catàleg</a></li>
+                                <li><a href="#contacte">Contacte</a></li>
+                                <!--<li><a href="#api">API</a></li>
+                                <li><a href="#comunitat">Comunitat</a></li>
+                                <li><a href="#xat">Xat</a></li>-->
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="busqueda"> 
+                        <input type="text" class="barra-busqueda" placeholder="Buscar">
+                        <button type="submit">
+                            <img src="img/busqueda.png" class="imgBusqueda">
+                        </button>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <nav class="grup-icones">
+                        <ul>
+                            <li>
+                                <a href="#notificacions"><img src="img/notificacio-Groc.png"></a>
+                            </li>
+                            <li>
+                                <a href="#llistaDesitjos"><img src="img/llistaDeDesitjos-Groc.png"></a>
+                            </li>
+                            <li>
+                                <a href="#garatge"><img src="img/garatge-Groc.png"></a>
+                            </li>
+                            <li>
+                                <a href="#usuari"><img src="img/usuari-Groc.png"></a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        </div>
+    </header>
+    <main>
+        <div class="grup">
+            <h1>Iniciar sesión</h1>
+            <form id="form-control">
+                <div class="form-group">
+                    <label for="email">Correo electrónico: </label>
+                    <input type="email" id="email" name="email" placeholder="Correo electrónico" required
+                        autocomplete="email">
+                    <ul id="suggestions" class="suggestions-list"></ul>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Contraseña: </label>
+                    <input type="password" id="password" name="password" placeholder="Contraseña" required
+                        pattern="/^(?=.*[0-9])(?=.*[A-Z])(?=.*[a-z])(?=.*[-_.*]).{8,20}$/v"
+                        autocomplete="current-password">
+                </div>
+
+                <div class="form-group">
+                    <p><a href="#contraseña">¿Has olvidado la contraseña?</a></p>
+                    <input type="submit" id="submit" value="Iniciar sesión">
+                    <p>¿No tienes cuenta? <a href="HTMLCSS/registro.html">Regístrate ahora</a></p>
+                </div>
+            </form>
+            <div class="error-message" id="errorMessage"></div>
+            <div class="success-message" id="successMessage"></div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <img src="img/logoBHEC.png" class="img-logo-footer">
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
+
+.login {
+    width: 300px;
+    margin: 0 auto;
+    margin-top: 50px;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    background-color: #ffffff;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+#email, #password {
+    padding: 8px;
+    font-size: 16px;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+#email:valid, #password:valid {
+    border-color: green;
+}
+
+#email:invalid, #password:invalid {
+    border-color: red;
+}
+
+#submit {
+    background-color: #e7d381ff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#submit:hover {
+    background-color: #aa8e31ff;
+}
+
+.error-message {
+    color: red;
+}
+
+a {
+    color: black;
+}
+
+.suggestions-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 300px; 
+    position: absolute;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: none;
+    text-align: left;
+}
+
+.suggestions-list li {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.suggestions-list li:hover {
+    background-color: #ddd;
+}
+
+.show {
+    display: block;
+}
