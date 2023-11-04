@@ -7,12 +7,13 @@
 	<title>Iniciar Sesión</title>
 	<link rel="stylesheet" type="text/css" href="css/styles.css">
 	<script src="js/main.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 
 <body>
 	<div class="container">
 		<h1>Iniciar sesión</h1>
-		<form id="form-control">
+		<form id="form-control" novalidate>
 			<div class="form-group">
 				<label for="email">Correo electrónico: </label>
 				<input type="email" id="email" name="email" placeholder="Correo electrónico" required autocomplete="email">
@@ -21,8 +22,7 @@
 
 			<div class="form-group">
 				<label for="password">Contraseña: </label>
-				<input type="password" id="password" name="password" placeholder="Contraseña" required
-					pattern="/^(?=.*[0-9])(?=.*[A-Z])(?=.*[a-z])(?=.*[-_.*]).{8,20}$/v" autocomplete="current-password">
+				<input type="password" id="password" name="password" placeholder="Contraseña" required autocomplete="current-password">
 			</div>
 
 			<div class="form-group">
@@ -33,6 +33,30 @@
 		</form>
 		<div class="error-message" id="errorMessage"></div>
 		<div class="success-message" id="successMessage"></div>
+
+		<!-- Modal Inicio de sesión correcto -->
+		<div class="modal-correct" id="modal-correct">
+			<div class="modal-content">
+				<span class="close">&times;</span>
+				<p>Inicio de sesión correcto!</p>
+			</div>
+		</div>
+		
+		<!-- Modal correo electronico invalido -->
+		<div class="modal-incorrect-email" id="modal-incorrect-email">
+			<div class="modal-content">
+				<span class="close-email">&times;</span>
+				<p>Correo electrónico inválido!</p>
+			</div>
+		</div>
+
+		<!-- Modal contraseña invalida -->
+		<div class="modal-incorrect-pwd" id="modal-incorrect-pwd">
+			<div class="modal-content">
+				<span class="close-pwd">&times;</span>
+				<p>La contraseña debe contener al menos 8 carácteres, incluyendo una mayúscula, una minúscula, un número y uno de los siguientes caracteres especiales: -_!</p>
+			</div>
+		</div>
 	</div>
 </body>
 

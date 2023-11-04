@@ -1,10 +1,27 @@
 'use strict';
 function main() {
+
+    Swal.fire({
+        title: 'Bienvenido a nuestra página',
+        showClass: {
+          popup: 'animate__animated animate__fadeInDown'
+        },
+        hideClass: {
+          popup: 'animate__animated animate__fadeOutUp'
+        }
+      })
+
     let emailInput     = document.getElementById('email');
     let pwdInput       = document.getElementById('password');
     let errorMessage   = document.getElementById('errorMessage');
     let successMessage = document.getElementById('successMessage');
     let form           = document.getElementById('form-control');
+    let modalCorrect   = document.getElementById('modal-correct');
+    let modalIncorrect = document.getElementById('modal-incorrect-email');
+    let modalPwd       = document.getElementById('modal-incorrect-pwd');
+    let closeModal     = document.querySelectorAll('.close')[0];
+    let closeModalEmail     = document.querySelectorAll('.close-email')[0];
+    let closeModalPwd     = document.querySelectorAll('.close-pwd')[0];
 
     validarCamps(emailInput, 'Campo obligatorio');
     validarCamps(pwdInput, 'Campo obligatorio');
@@ -40,14 +57,69 @@ function main() {
         if (!emailRegex.test(email) || !pwdRegex.test(pwd)) {
             event.preventDefault(); // Evitar que se envíe el formulario
             if (!emailRegex.test(email)) {
-                errorMessage.textContent = 'Correo electrónico inválido';
+                //errorMessage.textContent = 'Correo electrónico inválido';
+
+                // Sweet Alert
+                /*Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: 'Correo electronico inválido!'
+                });*/
+
+                // Modal
+                modalIncorrect.style.display = 'block';
+                closeModalEmail.onclick = function () {
+                    modalIncorrect.style.display = 'none';
+                };
+                window.onclick = function (event) {
+                    if (event.target == modalIncorrect) {
+                        modalIncorrect.style.display = 'none';
+                    }
+                };
             } else {
-                errorMessage.textContent = 'La contraseña debe contener al menos 8 caracteres, una mayúscula, una minúscula, un número y uno de los siguientes caracteres especiales: -_';
+                //errorMessage.textContent = 'La contraseña debe contener al menos 8 caracteres, una mayúscula, una minúscula, un número y uno de los siguientes caracteres especiales: -_';
+
+                // Sweet Alert
+                /*Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: 'La contraseña debe contener al menos 8 carácteres, incluyendo una mayúscula, una minúscula, un número y uno de los siguientes caracteres especiales: -_!'
+                });*/
+
+                // Modal
+                modalPwd.style.display = 'block';
+                closeModalPwd.onclick = function () {
+                    modalPwd.style.display = 'none';
+                };
+                window.onclick = function (event) {
+                    if (event.target == modalPwd) {
+                        modalPwd.style.display = 'none';
+                    }
+                };
             }
         } else {
             event.preventDefault(); // Evitar que se envíe el formulario
             errorMessage.textContent = ''; // Limpiar el mensaje de error si todo está bien
-            successMessage.textContent = 'Inicio de sesión correcto';
+            //successMessage.textContent = 'Inicio de sesión correcto';
+
+            // Sweet Alert
+            /*Swal.fire({
+                //position: 'top-end',
+                icon: 'success',
+                title: 'Inicio de sesión correcto!',
+                showConfirmButton: true,
+              });*/
+            
+            // Modal
+            modalCorrect.style.display = 'block';
+            closeModal.onclick = function () {
+                modalCorrect.style.display = 'none';
+            };
+            window.onclick = function (event) {
+                if (event.target == modalCorrect) {
+                    modalCorrect.style.display = 'none';
+                }
+            };
             successMessage.style.color = '#181d33'; // Establecer el color del mensaje de éxito
 
             document.cookie = `email=${email}; path=/`; // Almacena el correo electrónico en la cookie
