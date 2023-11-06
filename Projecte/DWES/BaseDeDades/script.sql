@@ -7,17 +7,49 @@ CREATE DATABASE IF NOT EXISTS db_proyecto;
 -- Usar la base de datos creada
 USE db_proyecto;
 
-CREATE TABLE IF NOT EXISTS usuarios (
-	id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-	tipo_usuario VARCHAR(225) NOT NULL,
-	nombre VARCHAR(255) NOT NULL,
-	apellido VARCHAR(255) NOT NULL,
-	domicilio VARCHAR(255) NOT NULL,
-	DNI VARCHAR(10) NOT NULL,
-	INDEX (DNI),
-	telefono VARCHAR(15) NOT NULL,
-	razon_social VARCHAR(255) NOT NULL,
-	correo_electronico VARCHAR(255) NOT NULL
+CREATE TABLE cliente (
+    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    tipo_usuario VARCHAR(20) NOT NULL,
+    nombre VARCHAR(255) NOT NULL,
+    apellido VARCHAR(255) NOT NULL,
+    domicilio VARCHAR(255) NOT NULL,
+    DNI VARCHAR(10) NOT NULL,
+    INDEX (DNI),
+    telefono VARCHAR(15) NOT NULL,
+    razon_social VARCHAR(255) NOT NULL,
+    correo_electronico VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS particular (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    tipo_usuario VARCHAR(225) NOT NULL,
+    nombre VARCHAR(255) NOT NULL,
+    apellido VARCHAR(255),
+    domicilio VARCHAR(255),
+    DNI VARCHAR(20),
+    telefono VARCHAR(15),
+    razon_social VARCHAR(255),
+    correo_electronico VARCHAR(255),
+    cliente_id INT,
+    FOREIGN KEY (cliente_id) REFERENCES cliente(id)
+);
+
+CREATE TABLE IF NOT EXISTS profesional (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    tipo_usuario VARCHAR(225) NOT NULL,
+    nombre VARCHAR(255) NOT NULL,
+    apellido VARCHAR(255),
+    domicilio VARCHAR(255),
+    DNI VARCHAR(20),
+    CIF VARCHAR(20),
+    NIF_gerente VARCHAR(20),
+    documento_LOPD VARCHAR(20),
+    escritura_constitucion VARCHAR(20),
+    telefono VARCHAR(15),
+    razon_social VARCHAR(255),
+    correo_electronico VARCHAR(255),
+    cliente_id INT,
+    FOREIGN KEY (cliente_id) REFERENCES cliente(id)
 );
 
 CREATE TABLE IF NOT EXISTS modelo (
@@ -29,9 +61,9 @@ CREATE TABLE IF NOT EXISTS modelo (
 );
 
 CREATE TABLE IF NOT EXISTS marca (
-    ID INT PRIMARY KEY,
+    id INT PRIMARY KEY,
     nombre VARCHAR(255),
-    FOREIGN KEY (ID) REFERENCES Modelo(ID)
+    FOREIGN KEY (ID) REFERENCES modelo(id)
 );
 
 CREATE TABLE IF NOT EXISTS vehiculo (
@@ -70,40 +102,12 @@ CREATE TABLE IF NOT EXISTS factura (
     dni_usuario VARCHAR(10) NOT NULL,
     id_pedido INT NOT NULL,
 	matricula_vehiculo VARCHAR(10),
-	FOREIGN KEY (dni_usuario) REFERENCES usuarios(DNI),
+	FOREIGN KEY (dni_usuario) REFERENCES cliente(DNI),
 	FOREIGN KEY (id_pedido) REFERENCES pedido(id),
 	FOREIGN KEY (matricula_vehiculo) REFERENCES vehiculo(matricula)
 );
 
-CREATE TABLE IF NOT EXISTS particular (
-	id INT AUTO_INCREMENT PRIMARY KEY,
-	tipo_usuario VARCHAR(225) NOT NULL,
-	nombre VARCHAR(255) NOT NULL,
-	apellido VARCHAR(255),
-	domicilio VARCHAR(255),
-	DNI VARCHAR(20),
-	telefono VARCHAR(15),
-	razon_social VARCHAR(255),
-	correo_electronico VARCHAR(255),
-	FOREIGN KEY (id) REFERENCES usuarios(id)
-);
 
-CREATE TABLE IF NOT EXISTS profesional (
-	id INT AUTO_INCREMENT PRIMARY KEY,
-	tipo_usuario VARCHAR(225) NOT NULL,
-	nombre VARCHAR(255) NOT NULL,
-	apellido VARCHAR(255),
-	domicilio VARCHAR(255),
-	DNI VARCHAR(20),
-	CIF VARCHAR(20),
-	NIF_gerente VARCHAR(20),
-	documento_LOPD VARCHAR(20),
-	escritura_constitucion VARCHAR(20),
-	telefono VARCHAR(15),
-	razon_social VARCHAR(255),
-	correo_electronico VARCHAR(255),
-	FOREIGN KEY (id) REFERENCES usuarios(id)
-);
 
 CREATE TABLE IF NOT EXISTS administrador (
 	id INT AUTO_INCREMENT PRIMARY KEY,
@@ -116,7 +120,7 @@ CREATE TABLE IF NOT EXISTS administrador (
 	telefono VARCHAR(15),
 	razon_social VARCHAR(255),
 	correo_electronico VARCHAR(255),
-	FOREIGN KEY (id) REFERENCES usuarios(id)
+	FOREIGN KEY (id) REFERENCES cliente(id)
 );
 
 CREATE TABLE IF NOT EXISTS administrativo (
@@ -130,7 +134,7 @@ CREATE TABLE IF NOT EXISTS administrativo (
 	telefono VARCHAR(15),
 	razon_social VARCHAR(255),
 	correo_electronico VARCHAR(255),
-	FOREIGN KEY (id) REFERENCES usuarios(id)
+	FOREIGN KEY (id) REFERENCES cliente(id)
 );
 
 CREATE TABLE IF NOT EXISTS proveedor (
