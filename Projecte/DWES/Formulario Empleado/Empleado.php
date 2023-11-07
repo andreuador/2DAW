@@ -5,12 +5,10 @@
  */
 class Empleado {
     public int $id;                 // ID único del empleado.
-    public $nombre;                // Nombre del empleado.
-    public $apellido;              // Apellido del empleado.
-    public $tipo;                  // Tipo de empleado.
-  public $email;                 // Dirección de correo electrónico del empleado.
-    public $contrasena;            // Contraseña del empleado.
-    public $confirmarCon;
+    public string $nombre;                // Nombre del empleado.
+    public string $apellido;              // Apellido del empleado.
+    public string $tipo;                  // Tipo de empleado.
+    public string $contrasena;            // Contraseña del empleado.
     protected string $errorMensaje = "La propiedad '%s' no existe en la clase %s.";
 
     /**
@@ -23,14 +21,12 @@ class Empleado {
      * @param string $email La dirección de correo electrónico del empleado.
      * @param string $contrasena La contraseña del empleado.
      */
-    public function __construct(int $id, string $nombre, string $apellido, string $tipo, string $email, string $contrasena, string $confirmarCon) {
+    public function __construct(int $id, string $nombre, string $apellido, string $tipo, string $contrasena) {
         $this->id = $id;
         $this->nombre = $nombre;
         $this->apellido = $apellido;
         $this->tipo = $tipo;
-        $this->email = $email;
         $this->contrasena = $contrasena;
-        $this->confirmarCon = $confirmarCon;
     }
 
     /**
@@ -59,6 +55,56 @@ class Empleado {
             $this->$propiedad = $valor;
         } else {
             throw new InvalidArgumentException(sprintf($this->errorMensaje, $propiedad, get_class($this)));
+        }
+    }
+
+    public function insertEmpleado($conn) {
+        try {
+            // Preparar la consulta SQL
+            $sql = "INSERT INTO employee (id, name, last_name, type, password) VALUES (:id, :nombre, :apellido, :tipo, :contrasena)";
+            
+            // Preparar la declaración
+            $stmt = $conn->prepare($sql);
+
+            // Bind de parámetros
+            $stmt->bindParam(':id', $this->id);
+            $stmt->bindParam(':nombre', $this->nombre);
+            $stmt->bindParam(':apellido', $this->apellido);
+            $stmt->bindParam(':tipo', $this->tipo);
+            $stmt->bindParam(':contrasena', $this->contrasena);
+
+            // Ejecutar la consulta
+            $stmt->execute();
+            return true;
+        } catch (PDOException $e) {
+            // Manejar errores de base de datos aquí...
+            return false;
+        }
+    }
+
+    public function eliminarEmpleado($conn) {
+        try {
+            // Preparar la consulta SQL
+            $sql = "DELETE FROM employee WHERE id = :id";
+    
+            // Preparar la declaración
+            $stmt = $conn->prepare($sql);
+    
+            // Bind de parámetro
+            $stmt->bindParam(':id', $this->id);
+    
+            // Ejecutar la consulta
+            $stmt->execute();
+    
+            // Verificar si el empleado fue eliminado correctamente
+            if ($stmt->rowCount() > 0) {
+                return true;
+            } else {
+                return false;
+            }
+        } catch (PDOException $e) {
+            // Manejar errores de base de datos aquí...
+            return false;
         }
     }
 }
