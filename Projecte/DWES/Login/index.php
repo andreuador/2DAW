@@ -11,7 +11,7 @@
 <body>
     <div class="container">
         <h1>Iniciar sesión</h1>
-        <form id="form-control" action="login.php" method="post">
+        <form id="form-control" action="login.php" method="post" novalidate>
             <div class="form-group">
                 <input type="hidden" id="csrf_token" name="csrf_token" value="<?php $token ?>">
                 <label for="email">Correo electrónico: </label>

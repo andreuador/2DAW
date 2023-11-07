@@ -135,44 +135,44 @@ function main() {
     ]
 
     const resultadosPorPagina = 5; // Cambia esto al número de filas que quieres mostrar por página
-let paginaActual = 1;
+    let paginaActual = 1;
 
-function mostrarDatosEnPagina(datos, pagina) {
-    const inicio = (pagina - 1) * resultadosPorPagina;
-    const fin = inicio + resultadosPorPagina;
-    const datosPagina = datos.slice(inicio, fin);
+    function mostrarDatosEnPagina(datos, pagina) {
+        const inicio = (pagina - 1) * resultadosPorPagina;
+        const fin = inicio + resultadosPorPagina;
+        const datosPagina = datos.slice(inicio, fin);
 
-    const cuerpoTabla = document.getElementById("tablaDatos").getElementsByTagName("tbody")[0];
-    cuerpoTabla.innerHTML = ""; // Limpiar el contenido anterior de la tabla
+        const cuerpoTabla = document.getElementById("tablaDatos").getElementsByTagName("tbody")[0];
+        cuerpoTabla.innerHTML = ""; // Limpiar el contenido anterior de la tabla
 
-    datosPagina.forEach(fila => {
-        const nuevaFila = cuerpoTabla.insertRow();
-        Object.values(fila).forEach(valor => {
-            const celda = nuevaFila.insertCell();
-            celda.textContent = valor;
+        datosPagina.forEach(fila => {
+            const nuevaFila = cuerpoTabla.insertRow();
+            Object.values(fila).forEach(valor => {
+                const celda = nuevaFila.insertCell();
+                celda.textContent = valor;
+            });
         });
-    });
-}
-
-function mostrarPaginacion(datos) {
-    const totalPaginas = Math.ceil(datos.length / resultadosPorPagina);
-    const paginacion = document.getElementById("paginacion");
-    paginacion.innerHTML = "";
-
-    for (let i = 1; i <= totalPaginas; i++) {
-        const botonPagina = document.createElement("button");
-        botonPagina.textContent = i;
-        botonPagina.addEventListener("click", () => {
-            paginaActual = i;
-            mostrarDatosEnPagina(datos, paginaActual);
-        });
-        paginacion.appendChild(botonPagina);
     }
-}
 
-// Mostrar la primera página de datos al cargar la página
-mostrarDatosEnPagina(datos, paginaActual);
-mostrarPaginacion(datos);
+    function mostrarPaginacion(datos) {
+        const totalPaginas = Math.ceil(datos.length / resultadosPorPagina);
+        const paginacion = document.getElementById("paginacion");
+        paginacion.innerHTML = "";
+
+        for (let i = 1; i <= totalPaginas; i++) {
+            const botonPagina = document.createElement("button");
+            botonPagina.textContent = i;
+            botonPagina.addEventListener("click", () => {
+                paginaActual = i;
+                mostrarDatosEnPagina(datos, paginaActual);
+            });
+            paginacion.appendChild(botonPagina);
+        }
+    }
+
+    // Mostrar la primera página de datos al cargar la página
+    mostrarDatosEnPagina(datos, paginaActual);
+    mostrarPaginacion(datos);
 }
 
 document.addEventListener('DOMContentLoaded', main);

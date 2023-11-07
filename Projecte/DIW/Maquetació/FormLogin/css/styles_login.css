@@ -211,6 +211,12 @@ footer {
     margin-bottom: 0.9375rem;
 }
 
+.logo-footer>p {
+    margin: 10px;
+    color: #e7d381;
+    font-size: 22px;
+}
+
 .img-logo-footer {
     width: 3.125rem;
 }

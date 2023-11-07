@@ -33,7 +33,6 @@ class Validator {
         } elseif (strlen($this->password) < 8) {
             $this->errors[] = "La contraseña debe tener al menos 8 caracteres.";
         }
-
         // La contraseña debe contener 1 número (0-9).
         // La contraseña debe contener 1 letra mayúscula.
         // La contraseña debe contener 1 letra minúscula.
