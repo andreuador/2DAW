@@ -10,6 +10,19 @@ function main() {
     validarCamps(pwdInput, 'Campo obligatorio');
     listaCorreos();
 
+    // selector
+    var menu = document.querySelector('.hamburger');
+
+    // method
+    function toggleMenu(event) {
+        this.classList.toggle('is-active');
+        document.querySelector(".menuppal").classList.toggle("is_active");
+        event.preventDefault();
+    }
+
+    // event
+    menu.addEventListener('click', toggleMenu, false);
+
     // Agregar eventos de ratón para cambiar el color de fondo cuando el ratón pasa por encima
     emailInput.addEventListener('mouseover', function () {
         emailInput.style.backgroundColor = '#f0f0f0'; // Cambiar a un color más oscuro

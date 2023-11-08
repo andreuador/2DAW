@@ -13,7 +13,7 @@ function main() {
             Tipo: "Profesional",
             Descuento: "0%",
             Total: "500.000€",
-            Comprador: "Juan Alberto"
+            Comprador: "Alberto Juan"
         },
         {
             ID: "02",
@@ -26,7 +26,7 @@ function main() {
             Tipo: "Profesional",
             Descuento: "0%",
             Total: "1.200.000€",
-            Comprador: "Maria Isabel"
+            Comprador: "Isabel María"
         },
         {
             ID: "03",
@@ -173,6 +173,32 @@ function main() {
     // Mostrar la primera página de datos al cargar la página
     mostrarDatosEnPagina(datos, paginaActual);
     mostrarPaginacion(datos);
+
+
+    window.setMobileTable = function (selector) {
+        // if (window.innerWidth > 600) return false;
+        const tableEl = document.querySelector(selector);
+        const thEls = tableEl.querySelectorAll('thead th');
+        const tdLabels = Array.from(thEls).map(el => el.innerText);
+        tableEl.querySelectorAll('tbody tr').forEach(tr => {
+            Array.from(tr.children).forEach(
+                (td, ndx) => td.setAttribute('label', tdLabels[ndx])
+            );
+        });
+    }
+
+    // selector
+    var menu = document.querySelector('.hamburger');
+
+    // method
+    function toggleMenu(event) {
+        this.classList.toggle('is-active');
+        document.querySelector(".menuppal").classList.toggle("is_active");
+        event.preventDefault();
+    }
+
+    // event
+    menu.addEventListener('click', toggleMenu, false);
 }
 
 document.addEventListener('DOMContentLoaded', main);

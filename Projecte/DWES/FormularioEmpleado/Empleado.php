@@ -18,7 +18,6 @@ class Empleado {
      * @param string $nombre El nombre del empleado.
      * @param string $apellido El apellido del empleado.
      * @param string $tipo El tipo de empleado.
-     * @param string $email La dirección de correo electrónico del empleado.
      * @param string $contrasena La contraseña del empleado.
      */
     public function __construct(int $id, string $nombre, string $apellido, string $tipo, string $contrasena) {
@@ -55,56 +54,6 @@ class Empleado {
             $this->$propiedad = $valor;
         } else {
             throw new InvalidArgumentException(sprintf($this->errorMensaje, $propiedad, get_class($this)));
-        }
-    }
-
-    public function insertEmpleado($conn) {
-        try {
-            // Preparar la consulta SQL
-            $sql = "INSERT INTO employee (id, name, last_name, type, password) VALUES (:id, :nombre, :apellido, :tipo, :contrasena)";
-            
-            // Preparar la declaración
-            $stmt = $conn->prepare($sql);
-
-            // Bind de parámetros
-            $stmt->bindParam(':id', $this->id);
-            $stmt->bindParam(':nombre', $this->nombre);
-            $stmt->bindParam(':apellido', $this->apellido);
-            $stmt->bindParam(':tipo', $this->tipo);
-            $stmt->bindParam(':contrasena', $this->contrasena);
-
-            // Ejecutar la consulta
-            $stmt->execute();
-            return true;
-        } catch (PDOException $e) {
-            // Manejar errores de base de datos aquí...
-            return false;
-        }
-    }
-
-    public function eliminarEmpleado($conn) {
-        try {
-            // Preparar la consulta SQL
-            $sql = "DELETE FROM employee WHERE id = :id";
-    
-            // Preparar la declaración
-            $stmt = $conn->prepare($sql);
-    
-            // Bind de parámetro
-            $stmt->bindParam(':id', $this->id);
-    
-            // Ejecutar la consulta
-            $stmt->execute();
-    
-            // Verificar si el empleado fue eliminado correctamente
-            if ($stmt->rowCount() > 0) {
-                return true;
-            } else {
-                return false;
-            }
-        } catch (PDOException $e) {
-            // Manejar errores de base de datos aquí...
-            return false;
         }
     }
 }
