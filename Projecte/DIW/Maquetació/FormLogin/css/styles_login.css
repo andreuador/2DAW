@@ -266,7 +266,7 @@ hr {
     .hamburger {
         position: fixed;
         background-color: transparent;
-        left: 480px;
+        left: 380px;
         top: 10px;
         height: 30px;
         width: 30px;
@@ -343,7 +343,7 @@ hr {
         transform: translate3d(0px, -100%, 0px);
         transition: transform 0.35s cubic-bezier(0.05, 1.04, 0.72, 0.98) 0s;
         width: 100%;
-        z-index: 10;
+        z-index: 1001;
     }
 
     .menuppal ul {
