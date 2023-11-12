@@ -8,11 +8,24 @@
     <script src="js/lib/jquery-2.1.4.min.js"></script>
     <style>
         .textoDorado {
-            color: goldenrod;
+            color: red;
             font-weight: bold;
         }
     </style>
 </head>
+
+<script>
+    // Cuando el documento este ready
+    //$(document).ready(function () {
+        // Selecciona todos los ul y les agrega la clase 'textoDorado'
+        //$('ul').addClass("textoDorado");
+    //});
+
+    $(function () {
+        // Seleccionar el primer <li>
+        $('li:first-child').addClass('textoDorado');
+    });
+</script>
 
 <body>
     <ul>
@@ -26,11 +39,6 @@
         <li>adios2</li>
         <li>adios3</li>
     </ul>
-
-    <script>
-        // Selecciona todos los ul y les agrega la clase 'textoDorado'
-        $('ul').addClass("textoDorado");
-    </script>
 </body>
 
 </html>
