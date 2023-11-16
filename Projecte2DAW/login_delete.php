@@ -8,9 +8,8 @@ $config = require __DIR__ . '/config/config.php';
 
 $database = new Database($config["database"]);
 
-//$loginRepository = new LoginRepository($database->getConnection(), Login::class);
-//$logins = $loginRepository->findAll();
+$id = $_GET['id'] ?? "";
+$loginRepository = new LoginRepository($database->getConnection(), Login::class);
+$logins = $loginRepository->find($id);
 
-echo View::render('login_create', 'default', ["logins"=>$logins]);
-
-
+echo View::render('login_delete', 'default', ["logins"=>$logins]);

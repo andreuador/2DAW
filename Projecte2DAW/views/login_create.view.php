@@ -18,7 +18,12 @@ $_SESSION["token"] = $token;
         </div>
         <div class="form-group">
             <label for="role">Role:</label>
-            <input type="text" name="role" id="role" required><span id="passwordError" class="error"></span>
+            <select name="role" id="role" required>
+                <option disabled selected value="">Role</option>
+                <option>Administrator</option>
+                <option>Administrative</option>
+                <option>Customer</option>
+            </select>
         </div>
         <div class="form-group">
             <button name="button" type="submit">Enviar</button>

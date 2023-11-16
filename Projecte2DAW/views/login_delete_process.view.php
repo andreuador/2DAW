@@ -1,7 +1,7 @@
 <h2>Resultat del formulari</h2>
 <div>
     <?php if (empty($errors)) : ?>
-        <h3>L'usuari s'ha creat correctament</h3>
+        <h3>L'usuari s'ha eliminat correctament</h3>
     <?php else : ?>
         <h3>Hi ha els següents errors:</h3>
         <ul>

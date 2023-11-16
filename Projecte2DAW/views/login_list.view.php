@@ -18,7 +18,9 @@
                     </td>
                     <td><?= $login->getPassword() ?></td>
                     <td><?= $login->getRole() ?></td>
-                    <td><a href="../login_delete.php?id=<?= $login->getId();?>">esborrar</a></td>
+                    <td><a href="../Projecte2DAW/login_create.php">Crear</a></td>
+                    <td><a href="../Projecte2DAW/login_delete.php?id=<?= $login->getId();?>">Esborrar</a></td>
+                    <td><a href="../Projecte2DAW/login_update.php">Actualitzar</a></td>
                 </tr>
             <?php endforeach; ?>
         </table>
