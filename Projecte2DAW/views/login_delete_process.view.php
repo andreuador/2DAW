@@ -13,6 +13,6 @@
 </div>
 
 <div>
-    <a href="../Projecte2DAw/login_list.php">Torna a veure els inicis de sessió</a>
-    <a href="../Projecte2DAW/login_create.php">Torna al formulari</a>
+    <a href="login_list.php">Torna a veure els inicis de sessió</a>
+    <a href="login_create.php">Torna al formulari</a>
 </div>

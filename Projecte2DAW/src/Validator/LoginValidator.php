@@ -19,13 +19,13 @@ class LoginValidator implements ValidatorInterface
         $password = $entity->getPassword();
 
         if (!preg_match($patronNombre, $name)) {
-            $errores[] = 'Nombre incorrecto';
-            $errores[] = 'No se ha podido crear el empleado';
+            $errores[] = 'Nom incorrecte';
+            $errores[] = 'No és pot crear o actualitzar el usuari';
         }
 
         if (!preg_match($patronPass, $password)) {
-            $errores[] = 'Contraseña incorrecta';
-            $errores[] = 'No se ha podido crear el empleado';
+            $errores[] = 'Contrasenya incorrecta';
+            $errores[] = 'No és pot crear o actualitzar el usuari';
         }
 
         return $errores;
