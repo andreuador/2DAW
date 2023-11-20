@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title> Cliente Profesional </title>
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/grid.css">
+    <link rel="stylesheet" href="css/styles_professional.css">
+    <script src="js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="logo">
+                        <a href="#logo">
+                            <img src="img/logoBHEC.png" class="img-logo-header">
+                        </a>
+                        <nav class="nav-header">
+                            <ul>
+                                <li><a href="#cataleg">Catàleg</a></li>
+                                <li><a href="#contacte">Contacte</a></li>
+                            </ul>
+                        </nav>
+                        <div class="hamburger">
+                            <div class="_layer -top"></div>
+                            <div class="_layer -mid"></div>
+                            <div class="_layer -bottom"></div>
+                        </div>
+                        <nav class="menuppal">
+                            <ul>
+                                <li><a href="#cataleg">Catàleg</a></li>
+                                <li><a href="#contacte">Contacte</a></li>
+                            </ul>
+                        </nav>
+                        <div class="busqueda">
+                            <input type="text" class="barra-busqueda" placeholder="Buscar">
+                            <button type="submit">
+                                <img src="img/busqueda.png" class="imgBusqueda">
+                            </button>
+                        </div>
+                        <nav class="grup-icones">
+                            <ul>
+                                <li>
+                                    <a href="#notificacions"><img src="img/notificacio-Groc.png"></a>
+                                </li>
+                                <li>
+                                    <a href="#llistaDesitjos"><img src="img/llistaDeDesitjos-Groc.png"></a>
+                                </li>
+                                <li>
+                                    <a href="#garatge"><img src="img/garatge-Groc.png"></a>
+                                </li>
+                                <li>
+                                    <a href="#usuari"><img src="img/usuari-Groc.png"></a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="titol">
+                        <h1>Professional</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <form id="form">
+                        <div class="form-group">
+                            <label for="nom">Nom:</label>
+                            <input type="text" id="nom" name="nom"  pattern="^[A-Za-záéíóúÁÉÍÓÚñÑ\s]+$">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="cognoms">Cognoms:</label>
+                            <input type="text" id="cognoms" name="cognoms"  pattern="^[A-Za-záéíóúÁÉÍÓÚñÑ\s]+$">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="adreça">Adreça:</label>
+                            <input type="text" id="adreça" name="adreça"
+                                pattern="^(?=\S*\s)(?=[^a-zA-Z]*[a-zA-Z])(?=\D*\d)[a-zA-Z\d\s',.#/-]*$">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="text" id="email" name="email"  pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="nom-empresa">Nom de l'empresa:</label>
+                            <input type="text" id="nom-empresa" name="nom-empresa"
+                                pattern="^[A-Za-záéíóúÁÉÍÓÚñÑ\s]+$">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="dni">DNI: </label>
+                            <input type="text" id="dni" name="dni" 
+                                pattern="^[0-9]{8}[TRWAGMYFPDXBNJZSQVHLCKE]$">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="password">Contrasenya:</label>
+                            <input type="password" id="password" name="password" 
+                                pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[-_.])[A-Za-z\d-_.]{8,}$">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="mobil">Mòbil:</label>
+                            <input type="tel" id="mobil" name="mobil"  pattern="^[0-9]{9}$">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="cif">CIF:</label>
+                            <input type="text" id="cif" name="cif" 
+                                pattern="^[A-Za-z]{1}[0-9]{7}[A-Za-z0-9]{1}$">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="manager-nif">Manager NIF:</label>
+                            <input type="text" id="manager-nif" name="manager-nif" 
+                                pattern="^[0-9]{8}[TRWAGMYFPDXBNJZSQVHLCKE]$">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subscription">Subscripció: </label>
+                            <input type="checkbox" id="subscription" name="subscription" >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="constitutionWriting">Escritura constitució: </label><br>
+                            <input type="file" id="constitutionWriting" name="constitutionWriting">
+                        </div>
+
+                        <div class="form-group">
+                            <p><a href="#contraseña">¿Has oblidat la teua contrasenya?</a></p>
+                            <input type="submit" id="submit" value="Registrate">
+                            <p>¿No tens compter? <a href="HTMLCSS/registro.html">Registrat ara</a></p>
+                        </div>
+                    </form>
+                    <div class="error-message" id="errorMessage"></div>
+                    <div class="success-message" id="successMessage"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="logo-footer">
+                        <img src="img/logoBHEC.png" class="img-logo-footer">
+                        <p>BHEC</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr class="">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="nav-footer">
+                        <ul>
+                            <li>
+                                <a href="#FAQ">FAQ</a>
+                            </li>
+                            <li>
+                                <p>|</p>
+                            </li>
+                            <li>
+                                <a href="#terminos">Terminos & Condiciones</a>
+                            </li>
+                            <li>
+                                <p>|</p>
+                            </li>
+                            <li>
+                                <a href="#politica">Politica de privacitat</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

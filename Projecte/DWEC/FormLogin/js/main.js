@@ -57,7 +57,7 @@ function main() {
         if (!emailRegex.test(email) || !pwdRegex.test(pwd)) {
             event.preventDefault(); // Evitar que se envíe el formulario
             if (!emailRegex.test(email)) {
-                //errorMessage.textContent = 'Correo electrónico inválido';
+                //errorMessage.textContent = 'Correo electrónico inválio';
 
                 // Sweet Alert
                 /*Swal.fire({
