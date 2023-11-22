@@ -123,7 +123,7 @@ main {
     text-align: center;
 }
 
-#form {
+#form-control {
     display: flex;
     flex-wrap: wrap;
 }
@@ -139,45 +139,31 @@ label {
     margin-bottom: 5px;
 }
 
-#nom,
-#cognoms,
-#adreça,
-#email,
-#dni,
-#nom-empresa,
-#password,
-#mobil,
-#cif,
-#manager-nif {
-    width: 100%;
+input {
     padding: 8px;
-    box-sizing: border-box;
+    font-size: 16px;
+    border: 2px solid black;
+    border-radius: 5px;
 }
 
-#nom,
-#cognoms,
-#adreça,
-#email,
-#dni,
-#nom-empresa,
-#password,
-#mobil,
-#cif,
-#manager-nif:valid {
-    border: 2px solid green;
+#constitutionWriting {
+    border: none;
 }
 
-#nom,
-#cognoms,
-#adreça,
-#email,
-#dni,
-#nom-empresa,
-#password,
-#mobil,
-#cif,
-#manager-nif:invalid {
-    border: 2px solid red;
+input:valid {
+    border-color: green;
+}
+
+input:invalid {
+    border-color: red;
+}
+
+.valid { 
+    border: 2px solid green; 
+}
+
+.invalid { 
+    border: 2px solid red; 
 }
 
 #submit {
@@ -214,6 +200,46 @@ label {
 
 a {
     color: black;
+}
+
+/* Estilos para el modal */
+.modal-correct, .modal-incorrect-email, .modal-incorrect-pwd {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    text-align: center;
+}
+
+.close, .close-email, .close-pwd {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus,
+.close-email:hover,
+.close-emial:focus,
+.close-pwd:hover,
+.close-pwd:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 /* Footer */

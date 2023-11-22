@@ -77,81 +77,104 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <form id="form">
+                    <form id="form-control" novalidate>
                         <div class="form-group">
                             <label for="nom">Nom:</label>
-                            <input type="text" id="nom" name="nom"  pattern="^[A-Za-záéíóúÁÉÍÓÚñÑ\s]+$">
+                            <input type="text" id="nom" name="nom" pattern="^^[a-zA-Z ]{0,25}$" required>
                         </div>
 
                         <div class="form-group">
                             <label for="cognoms">Cognoms:</label>
-                            <input type="text" id="cognoms" name="cognoms"  pattern="^[A-Za-záéíóúÁÉÍÓÚñÑ\s]+$">
+                            <input type="text" id="cognoms" name="cognoms" pattern="^[a-zA-Z ]{0,25}$" required>
                         </div>
 
                         <div class="form-group">
                             <label for="adreça">Adreça:</label>
                             <input type="text" id="adreça" name="adreça"
-                                pattern="^(?=\S*\s)(?=[^a-zA-Z]*[a-zA-Z])(?=\D*\d)[a-zA-Z\d\s',.#/-]*$">
+                                pattern="^(?=\S*\s)(?=[^a-zA-Z]*[a-zA-Z])(?=\D*\d)[a-zA-Z\d\s',.#/-]*$" required>
                         </div>
 
                         <div class="form-group">
                             <label for="email">Email:</label>
-                            <input type="text" id="email" name="email"  pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$">
+                            <input type="text" id="email" name="email" pattern="^[a-z0-9]+@[a-z0-9]+\.[a-z]{2,4}$"
+                                required>
                         </div>
 
                         <div class="form-group">
                             <label for="nom-empresa">Nom de l'empresa:</label>
-                            <input type="text" id="nom-empresa" name="nom-empresa"
-                                pattern="^[A-Za-záéíóúÁÉÍÓÚñÑ\s]+$">
+                            <input type="text" id="nom-empresa" name="nom-empresa" pattern="^[a-zA-Z ]{0,25}$" required>
                         </div>
 
                         <div class="form-group">
                             <label for="dni">DNI: </label>
-                            <input type="text" id="dni" name="dni" 
-                                pattern="^[0-9]{8}[TRWAGMYFPDXBNJZSQVHLCKE]$">
+                            <input type="text" id="dni" name="dni" pattern="^[0-9]{8}[A-Z]$" required>
                         </div>
 
                         <div class="form-group">
                             <label for="password">Contrasenya:</label>
-                            <input type="password" id="password" name="password" 
-                                pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[-_.])[A-Za-z\d-_.]{8,}$">
+                            <input type="password" id="password" name="password"
+                            pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$" required>
                         </div>
 
                         <div class="form-group">
                             <label for="mobil">Mòbil:</label>
-                            <input type="tel" id="mobil" name="mobil"  pattern="^[0-9]{9}$">
+                            <input type="tel" id="mobil" name="mobil" pattern="^[0-9]{9}$" required>
                         </div>
 
                         <div class="form-group">
                             <label for="cif">CIF:</label>
-                            <input type="text" id="cif" name="cif" 
-                                pattern="^[A-Za-z]{1}[0-9]{7}[A-Za-z0-9]{1}$">
+                            <input type="text" id="cif" name="cif" pattern="^[A-Za-z]{1}[0-9]{7}[A-Za-z0-9]{1}$" required>
                         </div>
 
                         <div class="form-group">
                             <label for="manager-nif">Manager NIF:</label>
-                            <input type="text" id="manager-nif" name="manager-nif" 
-                                pattern="^[0-9]{8}[TRWAGMYFPDXBNJZSQVHLCKE]$">
+                            <input type="text" id="manager-nif" name="manager-nif"
+                                pattern="^[0-9]{8}[TRWAGMYFPDXBNJZSQVHLCKE]$" required>
                         </div>
 
                         <div class="form-group">
                             <label for="subscription">Subscripció: </label>
-                            <input type="checkbox" id="subscription" name="subscription" >
+                            <input type="checkbox" id="subscription" name="subscription" required>
                         </div>
 
                         <div class="form-group">
                             <label for="constitutionWriting">Escritura constitució: </label><br>
-                            <input type="file" id="constitutionWriting" name="constitutionWriting">
+                            <input type="file" id="constitutionWriting" name="constitutionWriting" required>
                         </div>
 
                         <div class="form-group">
-                            <p><a href="#contraseña">¿Has oblidat la teua contrasenya?</a></p>
+                            <p><a href="#contraseña">Heu oblidat la contrasenya?</a></p>
                             <input type="submit" id="submit" value="Registrate">
-                            <p>¿No tens compter? <a href="HTMLCSS/registro.html">Registrat ara</a></p>
+                            <p>No tens compte? <a href="HTMLCSS/registro.html">Registra't ara</a></p>
                         </div>
                     </form>
                     <div class="error-message" id="errorMessage"></div>
                     <div class="success-message" id="successMessage"></div>
+                    <!-- Modal Inicio de sesión correcto -->
+                    <div class="modal-correct" id="modal-correct">
+                        <div class="modal-content">
+                            <span class="close">&times;</span>
+                            <p>Inicio de sessió correcte!</p>
+                        </div>
+                    </div>
+
+                    <!-- Modal correo electronico invalido -->
+                    <div class="modal-incorrect-email" id="modal-incorrect-email">
+                        <div class="modal-content">
+                            <span class="close-email">&times;</span>
+                            <p>Correu electrònic incorrecte!</p>
+                        </div>
+                    </div>
+
+                    <!-- Modal contraseña invalida -->
+                    <div class="modal-incorrect-pwd" id="modal-incorrect-pwd">
+                        <div class="modal-content">
+                            <span class="close-pwd">&times;</span>
+                            <p>La contrasenya ha de contenir almenys 8 caràcters, incloent-hi una majúscula, una
+                                minúscula, un número
+                                i un dels següents caràcters especials: -_!</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

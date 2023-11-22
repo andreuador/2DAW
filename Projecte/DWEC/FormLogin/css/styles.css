@@ -22,19 +22,27 @@ label {
     margin-bottom: 5px;
 }
 
-#email, #password {
+input {
     padding: 8px;
     font-size: 16px;
     border: 2px solid black;
     border-radius: 5px;
 }
 
-#email:valid, #password:valid {
+input:valid {
     border-color: green;
 }
 
-#email:invalid, #password:invalid {
+input:invalid {
     border-color: red;
+}
+
+.valid { 
+    border: 2px solid green; 
+}
+
+.invalid { 
+    border: 2px solid red; 
 }
 
 #submit {

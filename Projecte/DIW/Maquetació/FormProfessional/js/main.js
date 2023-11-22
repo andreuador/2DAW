@@ -1,151 +1,97 @@
-'use strict';
-function main() {
+document.addEventListener('DOMContentLoaded', (event) => {
+    let name = document.getElementById("nom");
+    let surname = document.getElementById("cognoms");
+    let address = document.getElementById("adreça");
+    let email = document.getElementById("email");
+    let companyName = document.getElementById("nom-empresa");
+    let dni = document.getElementById("dni");
+    let password = document.getElementById("password");
+    let phone = document.getElementById("mobil");
+    let cif = document.getElementById("cif");
+    let nif = document.getElementById("manager-nif");
 
-    // Variables
-    let nameInput = document.getElementById("nom");
-    let surnameInput = document.getElementById("cognoms");
-    let emailInput = document.getElementById("email");
-    let pwdInput = document.getElementById("password");
-    let dniInput = document.getElementById("dni");
-    let phoneInput = document.getElementById("mobil");
-    let cifInput = document.getElementById("cif");
-    let nifInput = document.getElementById("manager-nif");
-    let addressInput = document.getElementById("adreça");
-
-    let form = document.getElementById("form");
-    let errorMessage   = document.getElementById('errorMessage');
+    let form = document.getElementById("form-control");
+    let camps = document.querySelectorAll(".form-group");
+    let errorMessage = document.getElementById('errorMessage');
     let successMessage = document.getElementById('successMessage');
+    let modalCorrect = document.getElementById('modal-correct');
+    let modalIncorrect = document.getElementById('modal-incorrect-email');
+    let modalPwd = document.getElementById('modal-incorrect-pwd');
+    let closeModal = document.querySelectorAll('.close')[0];
+    let closeModalEmail = document.querySelectorAll('.close-email')[0];
+    let closeModalPwd = document.querySelectorAll('.close-pwd')[0];
 
-    // Expressions
-    const nameRegex = /^[A-Za-záéíóúÁÉÍÓÚñÑ\s]+$/;
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    const pwdRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[-_.])[A-Za-z\d-_.]{8,}$/;
-    const dniRegex = /^[0-9]{8}[A-Za-z]$/;
-    const phoneRegex = /^[0-9]{9}$/;
-    const cifRegex = /^[A-HJNP-SUW][0-9]{7}[0-9A-J]$/;
+    eventsRatoli(name);
 
-    // Funcions
-    validarCamps(nameInput, 'Camp obligatori');
-    validarCamps(surnameInput, 'Camp obligatori');
-    validarCamps(emailInput, 'Camp obligatori');
-    validarCamps(pwdInput, 'Camp obligatori');
-    validarCamps(dniInput, 'Camp obligatori');
-    validarCamps(phoneInput, 'Camp obligatori');
-    validarCamps(cifInput, 'Campo obligatori');
-    validarCamps(nifInput, 'Camp Obligatori');
+    camps.forEach(text => {
+        text.addEventListener('mousemove', () => {
+            text.classList.add('hovered');
+        });
 
-    eventsRatoli(nameInput);
-    eventsRatoli(surnameInput);
-    eventsRatoli(emailInput);
-    eventsRatoli(pwdInput);
-    eventsRatoli(dniInput);
-    eventsRatoli(phoneInput);
-    eventsRatoli(cifInput);
-    eventsRatoli(nifInput);
-    eventsRatoli(addressInput);
-
-    form.addEventListener('submit', function(event) {
-        let name = nameInput.value;
-        let surname = surnameInput.value;
-        let email = emailInput.value;
-        let pwd = pwdInput.value;
-        let dni = dniInput.value;
-        let phone = phoneInput.value;
-        let cif = cifInput.value;
-        let nif = nifInput.value;
-    
-        let isValid = true;
-    
-        if (!nameRegex.test(name) || !nameRegex.test(surname)) {
-            Swal.fire({
-                icon: 'error',
-                title: 'Oops...',
-                text: 'Nom o cognoms incorrectes'
-            });
-            isValid = false;
-        } else if (!emailRegex.test(email)) {
-            Swal.fire({
-                icon: 'error',
-                title: 'Oops...',
-                text: 'Correu electrònic incorrecte'
-            });
-            isValid = false;
-        } else if (!pwdRegex.test(pwd)) {
-            Swal.fire({
-                icon: 'error',
-                title: 'Oops...',
-                text: 'La contrasenya ha de contindre almenys 8 caràcters, una majúscula, una minúscula, un número i un dels següents caràcters especials: -_'
-            });
-            isValid = false;
-        } else if (!dniRegex.test(dni)) {
-            Swal.fire({
-                icon: 'error',
-                title: 'Oops...',
-                text: 'DNI incorrecte'
-            });
-            isValid = false;
-        } else if (!phoneRegex.test(phone)) {
-            Swal.fire({
-                icon: 'error',
-                title: 'Oops...',
-                text: 'Numero de mòbil incorrecte'
-            });
-            isValid = false;
-        } /*else if (!cifRegex.test(cif)) {
-            Swal.fire({
-                icon: 'error',
-                title: 'Oops...',
-                text: 'CIF incorrecte'
-            });
-            isValid = false;
-        }*/ else if (!dniRegex.test(nif)) {
-            Swal.fire({
-                icon: 'error',
-                title: 'Oops...',
-                text: 'NIF incorrecte'
-            });
-            isValid = false;
-        }
-    
-        if (isValid) {
-            // Todas las validaciones son correctas, puedes mostrar el mensaje de éxito
-            Swal.fire({
-                icon: 'success',
-                title: 'Registre completat',
-                text: '¡Registre completat amb éxit!'
-            });
-        } else {
-            event.preventDefault();
-        }
+        text.addEventListener('mouseout', () => {
+            text.classList.remove('hovered');
+        });
     });
-       
 
-    function validarCamps(camps, missatge) {
-        // Agrega un event d'escolta al camp d'entrada de texto per al event "input".
-        camps.addEventListener('input', () => {
+    name.addEventListener('input', (event) => {
+        validarCamps(name);
+        console.log(name.value);
+    });
 
-            // Establece un mensaje de validación personalizado en blanco.
-            camps.setCustomValidity('');
+    surname.addEventListener('input', (event) => {
+        validarCamps(surname);
+        console.log(surname.value);
+    });
 
-            // Verificar el campo de entrada de texto. Si el campo está vacío y es obligatorio, esta función devolverá "false". Si el campo contiene texto, devolverá "true".
-            camps.checkValidity();
+    address.addEventListener('input', (event) => {
+        validarCamps(address);
+        console.log(address.value);
+    });
 
-            // Añadir o quitar clases CSS según la validez del campo
-            if (camps.checkValidity()) {
-                camps.classList.remove('invalid');
-                camps.classList.add('valid');
-            } else {
-                camps.classList.remove('valid');
-                camps.classList.add('invalid');
-            }
-        });
+    email.addEventListener('input', (event) => {
+        validarCamps(email);
+        console.log(email.value);
+    });
 
-        // Agrega un event d'escolta al camp d'entrada de texto para el evento "invalid".
-        camps.addEventListener('invalid', () => {
+    companyName.addEventListener('input', (event) => {
+        validarCamps(companyName);
+        console.log(companyName.value);
+    });
 
-            // Esta línea establece un mensaje de validación personalizado que indica al usuario que debe completar el campo.
-            camps.setCustomValidity(missatge);
-        });
+    dni.addEventListener('input', (event) => {
+        ValidDNI();
+        console.log(dni.value);
+    });
+
+    password.addEventListener('input', (event) => {
+        validarCamps(password);
+        console.log(password.value);
+    });
+
+    phone.addEventListener('input', (event) => {
+        validarCamps(phone);
+        console.log(phone.value);
+    });
+
+    cif.addEventListener('input', (event) => {
+        validarCamps(cif);
+        console.log(cif.value);
+    });
+
+    nif.addEventListener('input', (event) => {
+        validarCamps(nif);
+        console.log(nif.value);
+    });
+
+    function validarCamps(data) {
+        if (data.validity.patternMismatch || data.value === "") {
+            data.classList.remove('valid');
+            data.classList.add('invalid');
+        }
+        else {
+            data.classList.remove('invalid');
+            data.classList.add('valid');
+        }
     }
 
     function eventsRatoli(inputElement) {
@@ -158,6 +104,20 @@ function main() {
         });
     }
 
-}
+    function ValidDNI() {
+        let dni = document.getElementById("dni").value;
+        let dniLetters = ["T", "R", "W", "A", "G", "M", "Y", "F", "P", "D", "X",
+            "B", "N", "J", "Z", "S", "Q", "V", "H", "L", "C", "K", "E"];
 
-document.addEventListener('DOMContentLoaded', main);
+        let dniN = dni.substr(0, 8);
+        let dniL = dni.substr(8, 9);
+
+        let residuo = dniN % 23
+        dniKey = dniLetters[residuo];
+
+        if (dniL == dniKey)
+            return true
+
+        return false
+    }
+});

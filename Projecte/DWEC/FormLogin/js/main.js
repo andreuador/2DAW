@@ -1,7 +1,7 @@
 'use strict';
 function main() {
 
-    Swal.fire({
+    /*Swal.fire({
         title: 'Bienvenido a nuestra página',
         showClass: {
           popup: 'animate__animated animate__fadeInDown'
@@ -9,7 +9,7 @@ function main() {
         hideClass: {
           popup: 'animate__animated animate__fadeOutUp'
         }
-      })
+      });*/
 
     let emailInput     = document.getElementById('email');
     let pwdInput       = document.getElementById('password');
@@ -23,8 +23,8 @@ function main() {
     let closeModalEmail     = document.querySelectorAll('.close-email')[0];
     let closeModalPwd     = document.querySelectorAll('.close-pwd')[0];
 
-    validarCamps(emailInput, 'Campo obligatorio');
-    validarCamps(pwdInput, 'Campo obligatorio');
+    //validarCamps(emailInput, 'Campo obligatorio');
+    //validarCamps(pwdInput, 'Campo obligatorio');
     listaCorreos();
 
     // Agregar eventos de ratón para cambiar el color de fondo cuando el ratón pasa por encima
@@ -43,6 +43,14 @@ function main() {
     pwdInput.addEventListener('mouseout', function () {
         pwdInput.style.backgroundColor = ''; // Restaurar el color de fondo original
     });
+
+    emailInput.addEventListener('input', (event) => {
+        validarCamps(emailInput);
+    });
+
+    pwdInput.addEventListener('input', (event) =>{
+        validarCamps(pwdInput);
+    })
 
     // Expresión para validar el correo electrónico.
     let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
