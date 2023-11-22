@@ -1,13 +1,4 @@
 document.addEventListener('DOMContentLoaded', (event) => {
-    Swal.fire({
-        title: 'Benvingut a la nostra pàgina',
-        showClass: {
-            popup: 'animate__animated animate__fadeInDown'
-        },
-        hideClass: {
-            popup: 'animate__animated animate__fadeOutUp'
-        }
-    });
 
     let email = document.getElementById("email");
     let password = document.getElementById("password");
