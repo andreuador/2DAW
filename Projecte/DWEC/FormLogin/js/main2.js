@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
                 /*Swal.fire({
                     icon: 'error',
                     title: 'Oops...',
-                    text: 'Correo electronico inválido!'
+                    text: 'Correu electrònic incorrecte!'
                 });*/
                 // Modal
                 modalIncorrect.style.display = 'block';
@@ -126,13 +126,13 @@ document.addEventListener('DOMContentLoaded', (event) => {
         } else {
             event.preventDefault();
             errorMessage.textContent = '';
-            //successMessage.textContent = 'Inicio de sesión correcto';
+            //successMessage.textContent = 'Inici de sessió correcte!';
 
             // Sweet Alert
             /*Swal.fire({
                 //position: 'top-end',
                 icon: 'success',
-                title: 'Inicio de sesión correcto!',
+                title: 'Inici de sessió correcte!',
                 showConfirmButton: true,
               });*/
 
@@ -154,7 +154,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
             // Reiniciar el formulario
             form.reset();
         }
-        });
+    });
 
     function listaCorreos() {
         document.getElementById('email').addEventListener('input', function () {

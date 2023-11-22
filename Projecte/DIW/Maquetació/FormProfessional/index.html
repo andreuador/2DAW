@@ -80,7 +80,7 @@
                     <form id="form-control" novalidate>
                         <div class="form-group">
                             <label for="nom">Nom:</label>
-                            <input type="text" id="nom" name="nom" pattern="^^[a-zA-Z ]{0,25}$" required>
+                            <input type="text" id="nom" name="nom" pattern="^[a-zA-Z ]{0,25}$">
                         </div>
 
                         <div class="form-group">
@@ -113,23 +113,22 @@
                         <div class="form-group">
                             <label for="password">Contrasenya:</label>
                             <input type="password" id="password" name="password"
-                            pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$" required>
+                                pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$" required>
                         </div>
 
                         <div class="form-group">
                             <label for="mobil">Mòbil:</label>
-                            <input type="tel" id="mobil" name="mobil" pattern="^[0-9]{9}$" required>
+                            <input type="text" id="mobil" name="mobil" pattern="^[0-9]{9}$" required>
                         </div>
 
                         <div class="form-group">
                             <label for="cif">CIF:</label>
-                            <input type="text" id="cif" name="cif" pattern="^[A-Za-z]{1}[0-9]{7}[A-Za-z0-9]{1}$" required>
+                            <input type="text" id="cif" name="cif" pattern="^[A-Za-z]{1}[0-9]{8}$" required>
                         </div>
 
                         <div class="form-group">
                             <label for="manager-nif">Manager NIF:</label>
-                            <input type="text" id="manager-nif" name="manager-nif"
-                                pattern="^[0-9]{8}[TRWAGMYFPDXBNJZSQVHLCKE]$" required>
+                            <input type="text" id="manager-nif" name="manager-nif" pattern="^[0-9]{8}[A-Z]$" required>
                         </div>
 
                         <div class="form-group">
@@ -144,7 +143,7 @@
 
                         <div class="form-group">
                             <p><a href="#contraseña">Heu oblidat la contrasenya?</a></p>
-                            <input type="submit" id="submit" value="Registrate">
+                            <button type="submit" id="submit">Crear compte</button>
                             <p>No tens compte? <a href="HTMLCSS/registro.html">Registra't ara</a></p>
                         </div>
                     </form>
@@ -154,7 +153,7 @@
                     <div class="modal-correct" id="modal-correct">
                         <div class="modal-content">
                             <span class="close">&times;</span>
-                            <p>Inicio de sessió correcte!</p>
+                            <p>Inici de sessió correcte!</p>
                         </div>
                     </div>
 
@@ -171,8 +170,7 @@
                         <div class="modal-content">
                             <span class="close-pwd">&times;</span>
                             <p>La contrasenya ha de contenir almenys 8 caràcters, incloent-hi una majúscula, una
-                                minúscula, un número
-                                i un dels següents caràcters especials: -_!</p>
+                                minúscula, un número i un dels següents caràcters especials: -_!</p>
                         </div>
                     </div>
                 </div>
@@ -203,7 +201,7 @@
                                 <p>|</p>
                             </li>
                             <li>
-                                <a href="#terminos">Terminos & Condiciones</a>
+                                <a href="#terminos">Termes & Condicions</a>
                             </li>
                             <li>
                                 <p>|</p>
