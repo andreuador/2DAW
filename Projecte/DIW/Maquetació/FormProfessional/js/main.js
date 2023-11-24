@@ -1,40 +1,46 @@
 document.addEventListener("DOMContentLoaded", (event) => {
-    let name = document.getElementById("nom");
-    let surname = document.getElementById("cognoms");
-    let email = document.getElementById("email");
-    let dniInput = document.getElementById("dni");
-    let password = document.getElementById("password");
-    let phone = document.getElementById("mobil");
-    let cifInput = document.getElementById("cif");
-    let nifInput = document.getElementById("manager-nif");
+    const elements = {
+        name: document.getElementById("nom"),
+        surname: document.getElementById("cognoms"),
+        email: document.getElementById("email"),
+        dniInput: document.getElementById("dni"),
+        password: document.getElementById("password"),
+        phone: document.getElementById("mobil"),
+        cifInput: document.getElementById("cif"),
+        nifInput: document.getElementById("manager-nif"),
+    };
 
-    let camps = document.querySelectorAll(".form-group");
-    let form = document.getElementById("form-control");
+    const camps = document.querySelectorAll(".form-group");
+    const form = document.getElementById("form-control");
 
-    let errorMessage = document.getElementById('errorMessage');
-    let successMessage = document.getElementById('successMessage');
-    let modalCorrect = document.getElementById('modal-correct');
-    let modalIncorrect = document.getElementById('modal-incorrect-email');
-    let modalPwd = document.getElementById('modal-incorrect-pwd');
-    let closeModal = document.querySelectorAll('.close')[0];
-    let closeModalEmail = document.querySelectorAll('.close-email')[0];
-    let closeModalPwd = document.querySelectorAll('.close-pwd')[0];
+    const messages = {
+        errorMessage: document.getElementById('errorMessage'),
+        successMessage: document.getElementById('successMessage'),
+        modalCorrect: document.getElementById('modal-correct'),
+        modalIncorrect: document.getElementById('modal-incorrect-email'),
+        modalPwd: document.getElementById('modal-incorrect-pwd'),
+        closeModal: document.querySelectorAll('.close')[0],
+        closeModalEmail: document.querySelectorAll('.close-email')[0],
+        closeModalPwd: document.querySelectorAll('.close-pwd')[0],
+    };
 
-    const nameRegex = /^[a-zA-Z ]{0,25}$/;
-    const emailRegex = /^[a-z0-9]+@[a-z0-9]+\.[a-z]{2,4}$/;
-    const dniRegex = /^[0-9]{8}[A-Z]$/;
-    const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$/;
-    const phoneRegex = /^[0-9]{9}$/;
-    const cifRegex = /^[A-Za-z]{1}[0-9]{8}$/;
+    const regexPatterns = {
+        name: /^[a-zA-Z ]{0,25}$/,
+        email: /^[a-z0-9]+@[a-z0-9]+\.[a-z]{2,4}$/,
+        dni: /^[0-9]{8}[A-Z]$/,
+        password: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$/,
+        phone: /^[0-9]{9}$/,
+        cif: /^[A-Za-z]{1}[0-9]{8}$/,
+    };
 
-    eventsRatoli(name);
-    eventsRatoli(surname);
-    eventsRatoli(email);
-    eventsRatoli(dniInput);
-    eventsRatoli(password);
-    eventsRatoli(phone);
-    eventsRatoli(cifInput);
-    eventsRatoli(nifInput);
+    eventsRatoli(elements.name);
+    eventsRatoli(elements.surname);
+    eventsRatoli(elements.email);
+    eventsRatoli(elements.dniInput);
+    eventsRatoli(elements.password);
+    eventsRatoli(elements.phone);
+    eventsRatoli(elements.cifInput);
+    eventsRatoli(elements.nifInput);
 
     camps.forEach((text) => {
         text.addEventListener("mousemove", () => {
@@ -46,125 +52,87 @@ document.addEventListener("DOMContentLoaded", (event) => {
         });
     });
 
-    name.addEventListener("input", (event) => {
-        validarCamps(name);
+    elements.name.addEventListener("input", (event) => {
+        validarCamps(elements.name);
     });
 
-    surname.addEventListener("input", (event) => {
-        validarCamps(surname);
+    elements.surname.addEventListener("input", (event) => {
+        validarCamps(elements.surname);
     });
 
-    email.addEventListener("input", (event) => {
-        validarCamps(email);
+    elements.email.addEventListener("input", (event) => {
+        validarCamps(elements.email);
     });
 
-    dniInput.addEventListener("input", (event) => {
-        validarCamps(dniInput);
+    elements.dniInput.addEventListener("input", (event) => {
+        validarCamps(elements.dniInput);
     });
 
-    password.addEventListener('input', (event) => {
-        validarCamps(password);
+    elements.password.addEventListener('input', (event) => {
+        validarCamps(elements.password);
     });
 
-    phone.addEventListener('input', (event) => {
-        validarCamps(phone);
+    elements.phone.addEventListener('input', (event) => {
+        validarCamps(elements.phone);
     });
 
-    cifInput.addEventListener('input', (event) => {
-        validarCamps(cifInput);
+    elements.cifInput.addEventListener('input', (event) => {
+        validarCamps(elements.cifInput);
     });
 
-    nifInput.addEventListener('input', (event) => {
-        validarCamps(nifInput);
+    elements.nifInput.addEventListener('input', (event) => {
+        validarCamps(elements.nifInput);
     });
 
     form.addEventListener("submit", (event) => {
-        let nom = name.value;
-        let cognoms = surname.value;
-        let correu = email.value;
-        let dni = dniInput.value;
-        let contrasenya = password.value;
-        let mobil = phone.value;
-        let cif = cifInput.value;
-        let nif = nifInput.value;
+        let nom = elements.name.value;
+        let cognoms = elements.surname.value;
+        let correu = elements.email.value;
+        let dni = elements.dniInput.value;
+        let contrasenya = elements.password.value;
+        let mobil = elements.phone.value;
+        let cif = elements.cifInput.value;
+        let nif = elements.nifInput.value;
 
         if (
-            !nameRegex.test(nom) ||
-            !nameRegex.test(cognoms) ||
-            !emailRegex.test(correu) ||
-            !dniRegex.test(dni) ||
-            !passwordRegex.test(contrasenya) ||
-            !phoneRegex.test(mobil) ||
-            !cifRegex.test(cif) ||
-            !dniRegex.test(nif)
+            !regexPatterns.name.test(nom) ||
+            !regexPatterns.name.test(cognoms) ||
+            !regexPatterns.email.test(correu) ||
+            !regexPatterns.dni.test(dni) ||
+            !regexPatterns.password.test(contrasenya) ||
+            !regexPatterns.phone.test(mobil) ||
+            !regexPatterns.cif.test(cif) ||
+            !regexPatterns.dni.test(nif)
         ) {
             event.preventDefault();
-            if (!nameRegex.test(nom) || !nameRegex.test(cognoms)) {
-                Swal.fire({
-                    icon: "error",
-                    title: "Oops...",
-                    text: "Nom o cognoms incorrectes!",
-                });
-            } else if (!emailRegex.test(correu)) {
-                //errorMessage.textContent = 'Correu electrònic incorrecte';
-                Swal.fire({
-                    icon: "error",
-                    title: "Oops...",
-                    text: "Correu electrònic incorrecte!",
-                });
-            } else if (!dniRegex.test(dni) || !dniRegex.test(nif)) {
-                Swal.fire({
-                    icon: 'error',
-                    title: 'Oops...',
-                    text: 'DNI incorrecte o NIF incorrecte!'
-                });
-            } else if (!passwordRegex.test(contrasenya)) {
-                Swal.fire({
-                    icon: 'error',
-                    title: 'Oops...',
-                    text: 'La contrasenya ha de contindre almenys 8 caràcters, una majúscula, una minúscula, un número i un dels següents caràcters especials: -_'
-                });
-            } else if (!phoneRegex.test(mobil)) {
-                Swal.fire({
-                    icon: 'error',
-                    title: 'Oops...',
-                    text: 'Numero de mòbil incorrecte'
-                });
-            } else if (!cifRegex.test(cif)) {
-                Swal.fire({
-                    icon: 'error',
-                    title: 'Oops...',
-                    text: 'CIF incorrecte'
-                });
+            if (!regexPatterns.name.test(nom) || !regexPatterns.name.test(cognoms)) {
+                showError("Nom o cognoms incorrectes!");
+            } else if (!regexPatterns.email.test(correu)) {
+                showError("Correu electrònic incorrecte!");
+            } else if (!regexPatterns.dni.test(dni) || !regexPatterns.dni.test(nif)) {
+                showError("DNI incorrecte o NIF incorrecte!");
+            } else if (!regexPatterns.password.test(contrasenya)) {
+                showError("La contrasenya ha de contindre almenys 8 caràcters, una majúscula, una minúscula, un número i un dels següents caràcters especials: -_");
+            } else if (!regexPatterns.phone.test(mobil)) {
+                showError("Numero de mòbil incorrecte");
+            } else if (!regexPatterns.cif.test(cif)) {
+                showError("CIF incorrecte");
             }
-
         } else {
             event.preventDefault();
-            errorMessage.textContent = '';
-            //successMessage.textContent = 'Inici de sessió correcte!';
-            /*Swal.fire({
-                //position: 'top-end',
-                icon: "success",
-                title: "Inici de sessió correcte!",
-                showConfirmButton: true,
-            });*/
-
-            // Modal
-            modalCorrect.style.display = 'block';
-            closeModal.onclick = function () {
-                modalCorrect.style.display = 'none';
+            messages.errorMessage.textContent = '';
+            messages.modalCorrect.style.display = 'block';
+            messages.closeModal.onclick = function () {
+                messages.modalCorrect.style.display = 'none';
             };
             window.onclick = function (event) {
-                if (event.target == modalCorrect) {
-                    modalCorrect.style.display = 'none';
+                if (event.target == messages.modalCorrect) {
+                    messages.modalCorrect.style.display = 'none';
                 }
             };
-            successMessage.style.color = '#181d33'; // Establecer el color del mensaje de éxito
-
-            document.cookie = `email=${email}; path=/`; // Almacena el correo electrónico en la cookie
-            document.cookie = `loggedIn=true; path=/`; // Almacena un indicador de inicio de sesión en la cookie
-
-            // Reiniciar el formulario
+            messages.successMessage.style.color = '#181d33';
+            document.cookie = `email=${correu}; path=/`;
+            document.cookie = `loggedIn=true; path=/`;
             form.reset();
         }
     });
@@ -181,50 +149,19 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
     function eventsRatoli(inputElement) {
         inputElement.addEventListener('mouseover', function () {
-            inputElement.style.backgroundColor = '#f0f0f0'; // Cambiar a un color más oscuro
+            inputElement.style.backgroundColor = '#f0f0f0';
         });
-    
+
         inputElement.addEventListener('mouseout', function () {
-            inputElement.style.backgroundColor = ''; // Restaurar el color de fondo original
+            inputElement.style.backgroundColor = '';
         });
     }
 
-    function validarDni() {
-        let dni = document.getElementById("dni").value;
-        let dniLetters = [
-            "T",
-            "R",
-            "W",
-            "A",
-            "G",
-            "M",
-            "Y",
-            "F",
-            "P",
-            "D",
-            "X",
-            "B",
-            "N",
-            "J",
-            "Z",
-            "S",
-            "Q",
-            "V",
-            "H",
-            "L",
-            "C",
-            "K",
-            "E",
-        ];
-
-        let dniN = dni.substr(0, 8);
-        let dniL = dni.substr(8, 9);
-
-        let residuo = dniN % 23;
-        dniKey = dniLetters[residuo];
-
-        if (dniL == dniKey) return true;
-
-        return false;
+    function showError(message) {
+        Swal.fire({
+            icon: "error",
+            title: "Oops...",
+            text: message,
+        });
     }
 });

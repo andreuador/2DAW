@@ -1,44 +1,38 @@
 document.addEventListener('DOMContentLoaded', (event) => {
 
-    let email = document.getElementById("email");
-    let password = document.getElementById("password");
+    const elements = {
+        email: document.getElementById("email"),
+        password: document.getElementById("password"),
+        form: document.getElementById("form-control"),
+        camps: document.querySelectorAll(".form-group"),
+        errorMessage: document.getElementById('errorMessage'),
+        successMessage: document.getElementById('successMessage'),
+        modalCorrect: document.getElementById('modal-correct'),
+        modalIncorrect: document.getElementById('modal-incorrect-email'),
+        modalPwd: document.getElementById('modal-incorrect-pwd'),
+        closeModal: document.querySelectorAll('.close')[0],
+        closeModalEmail: document.querySelectorAll('.close-email')[0],
+        closeModalPwd: document.querySelectorAll('.close-pwd')[0],
+    };
 
-    let form = document.getElementById("form-control");
-    let camps = document.querySelectorAll(".form-group");
-
-    let errorMessage = document.getElementById('errorMessage');
-    let successMessage = document.getElementById('successMessage');
-
-    let modalCorrect = document.getElementById('modal-correct');
-    let modalIncorrect = document.getElementById('modal-incorrect-email');
-    let modalPwd = document.getElementById('modal-incorrect-pwd');
-    
-    let closeModal = document.querySelectorAll('.close')[0];
-    let closeModalEmail = document.querySelectorAll('.close-email')[0];
-    let closeModalPwd = document.querySelectorAll('.close-pwd')[0];
-
-    const emailRegex = /^[a-z0-9]+@[a-z0-9]+\.[a-z]{2,4}$/;
-    const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$/;
+    const regexPatterns = {
+        emailRegex: /^[a-z0-9]+@[a-z0-9]+\.[a-z]{2,4}$/,
+        passwordRegex:/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$/,
+    }
 
     listaCorreos();
 
-    email.addEventListener('mouseover', function () {
-        email.style.backgroundColor = '#f0f0f0'; // Cambiar a un color más oscuro
+    Object.values(elements).forEach(element => {
+        element.addEventListener('mouseover', function () {
+            element.style.backgroundColor = '#f0f0f0';
+        });
+
+        element.addEventListener('mouseout', function () {
+            element.style.backgroundColor = '';
+        });
     });
 
-    email.addEventListener('mouseout', function () {
-        email.style.backgroundColor = ''; // Restaurar el color de fondo original
-    });
-
-    password.addEventListener('mouseover', function () {
-        password.style.backgroundColor = '#f0f0f0'; // Cambiar a un color más oscuro
-    });
-
-    password.addEventListener('mouseout', function () {
-        password.style.backgroundColor = ''; // Restaurar el color de fondo original
-    });
-
-    camps.forEach(text => {
+    elements.camps.forEach(text => {
         text.addEventListener('mousemove', () => {
             text.classList.add('hovered');
         });
@@ -48,14 +42,59 @@ document.addEventListener('DOMContentLoaded', (event) => {
         });
     });
 
-    email.addEventListener('input', (event) => {
-        validarCamps(email);
-        console.log(email.value);
+    Object.values(elements).forEach(element => {
+        if (element !== elements.form) {
+            element.addEventListener('input', (event) => {
+                validarCamps(element);
+            });
+        }
     });
 
-    password.addEventListener('input', (event) => {
-        validarCamps(password);
-        console.log(password.value);
+    elements.form.addEventListener('submit', function (event) {
+        let correu = elements.email.value;
+        let contrasenya = elements.password.value;
+
+        let isValid = true;
+
+        if (!regexPatterns.emailRegex.test(correu) || !regexPatterns.passwordRegex.test(contrasenya)) {
+            event.preventDefault();
+            if (!regexPatterns.emailRegex.test(correu)) {
+                elements.modalIncorrect.style.display = 'block';
+                elements.closeModalEmail.onclick = function () {
+                    elements.modalIncorrect.style.display = 'none';
+                };
+                window.onclick = function (event) {
+                    if (event.target == elements.modalIncorrect) {
+                        elements.modalIncorrect.style.display = 'none';
+                    }
+                };
+                isValid = false;
+            } else if (!regexPatterns.passwordRegex.test(contrasenya)) {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: 'La contrasenya ha de contindre almenys 8 caràcters, una majúscula, una minúscula, un número i un dels següents caràcters especials: -_'
+                });
+            }
+        } else {
+            event.preventDefault();
+            elements.errorMessage.textContent = '';
+            elements.modalCorrect.style.display = 'block';
+            elements.closeModal.onclick = function () {
+                elements.modalCorrect.style.display = 'none';
+            };
+            window.onclick = function (event) {
+                if (event.target == elements.modalCorrect) {
+                    elements.modalCorrect.style.display = 'none';
+                }
+            };
+            elements.successMessage.style.color = '#181d33';
+
+            document.cookie = `email=${correu}; path=/`;
+            document.cookie = `loggedIn=true; path=/`;
+
+            elements.form.reset();
+        }
     });
 
     function validarCamps(data) {
@@ -69,109 +108,25 @@ document.addEventListener('DOMContentLoaded', (event) => {
         }
     }
 
-    form.addEventListener('submit', function (event) {
-        let correu = email.value;
-        let contrasenya = password.value;
-
-        let isValid = true;
-
-        if (!emailRegex.test(correu) || !passwordRegex.test(contrasenya)) {
-            event.preventDefault(); // Evitar que se envíe el formulario
-            if (!emailRegex.test(correu)) {
-                //errorMessage.textContent = 'Correu electrònic incorrecte';
-
-                // Sweet Alert
-                /*Swal.fire({
-                    icon: 'error',
-                    title: 'Oops...',
-                    text: 'Correo electronico inválido!'
-                });*/
-                // Modal
-                modalIncorrect.style.display = 'block';
-                closeModalEmail.onclick = function () {
-                    modalIncorrect.style.display = 'none';
-                };
-                window.onclick = function (event) {
-                    if (event.target == modalIncorrect) {
-                        modalIncorrect.style.display = 'none';
-                    }
-                };
-                isValid = false;
-            } else if (!passwordRegex.test(contrasenya)) {
-                //errorMessage.textContent = 'La contrasenya ha de contindre almenys 8 caràcters, una majúscula, una minúscula, un número i un dels següents caràcters especials: -_';
-
-                // Sweet Alert
-                Swal.fire({
-                    icon: 'error',
-                    title: 'Oops...',
-                    text: 'La contrasenya ha de contindre almenys 8 caràcters, una majúscula, una minúscula, un número i un dels següents caràcters especials: -_'
-                });
-
-                // Modal
-                /*modalPwd.style.display = 'block';
-                closeModalPwd.onclick = function () {
-                    modalPwd.style.display = 'none';
-                };
-                window.onclick = function (event) {
-                    if (event.target == modalPwd) {
-                        modalPwd.style.display = 'none';
-                    }
-                };*/
-            }
-        } else {
-            event.preventDefault();
-            errorMessage.textContent = '';
-            //successMessage.textContent = 'Inicio de sesión correcto';
-
-            // Sweet Alert
-            /*Swal.fire({
-                //position: 'top-end',
-                icon: 'success',
-                title: 'Inicio de sesión correcto!',
-                showConfirmButton: true,
-              });*/
-
-            // Modal
-            modalCorrect.style.display = 'block';
-            closeModal.onclick = function () {
-                modalCorrect.style.display = 'none';
-            };
-            window.onclick = function (event) {
-                if (event.target == modalCorrect) {
-                    modalCorrect.style.display = 'none';
-                }
-            };
-            successMessage.style.color = '#181d33'; // Establecer el color del mensaje de éxito
-
-            document.cookie = `email=${email}; path=/`; // Almacena el correo electrónico en la cookie
-            document.cookie = `loggedIn=true; path=/`; // Almacena un indicador de inicio de sesión en la cookie
-
-            // Reiniciar el formulario
-            form.reset();
-        }
-        });
-
     function listaCorreos() {
-        document.getElementById('email').addEventListener('input', function () {
+        elements.email.addEventListener('input', function () {
             let username = this.value;
             let suggestionsContainer = document.getElementById('suggestions');
-            let domains = ['@gmail.com', '@hotmail.com', '@outlook.com', '@yahoo.com']; // Puedes agregar más dominios aquí
+            let domains = ['@gmail.com', '@hotmail.com', '@outlook.com', '@yahoo.com'];
 
-            suggestionsContainer.innerHTML = ''; // Limpiar las sugerencias anteriores
+            suggestionsContainer.innerHTML = '';
 
             domains.forEach(function (domain) {
                 let suggestion = document.createElement('li');
                 suggestion.textContent = username + domain;
                 suggestion.addEventListener('click', function () {
-                    document.getElementById('email').value = suggestion.textContent;
-                    suggestionsContainer.innerHTML = ''; // Limpiar las sugerencias después de hacer clic en una opción
-                    // Establecer la validez del campo de correo electrónico al seleccionar una sugerencia
-                    document.getElementById('email').setCustomValidity('');
+                    elements.email.value = suggestion.textContent;
+                    suggestionsContainer.innerHTML = '';
+                    elements.email.setCustomValidity('');
                 });
                 suggestionsContainer.appendChild(suggestion);
             });
 
-            // Mostrar la lista desplegable si hay sugerencias
             if (domains.some(domain => username.length > 0)) {
                 suggestionsContainer.classList.add('show');
             } else {
@@ -179,12 +134,10 @@ document.addEventListener('DOMContentLoaded', (event) => {
             }
         });
 
-        // Ocultar la lista desplegable cuando se hace clic fuera de ella
         document.addEventListener('click', function (event) {
             if (!document.getElementById('suggestions').contains(event.target)) {
                 document.getElementById('suggestions').classList.remove('show');
-                // Establecer la validez del campo de correo electrónico si no se selecciona ninguna sugerencia
-                document.getElementById('email').checkValidity();
+                elements.email.checkValidity();
             }
         });
     }
