@@ -1,94 +1,96 @@
-document.addEventListener('DOMContentLoaded', (event) => {
-
+document.addEventListener("DOMContentLoaded", (event) => {
     const elements = {
         email: document.getElementById("email"),
         password: document.getElementById("password"),
         form: document.getElementById("form-control"),
         camps: document.querySelectorAll(".form-group"),
-        errorMessage: document.getElementById('errorMessage'),
-        successMessage: document.getElementById('successMessage'),
-        modalCorrect: document.getElementById('modal-correct'),
-        modalIncorrect: document.getElementById('modal-incorrect-email'),
-        modalPwd: document.getElementById('modal-incorrect-pwd'),
-        closeModal: document.querySelectorAll('.close')[0],
-        closeModalEmail: document.querySelectorAll('.close-email')[0],
-        closeModalPwd: document.querySelectorAll('.close-pwd')[0],
+        errorMessage: document.getElementById("errorMessage"),
+        successMessage: document.getElementById("successMessage"),
+        modalCorrect: document.getElementById("modal-correct"),
+        modalIncorrect: document.getElementById("modal-incorrect-email"),
+        modalPwd: document.getElementById("modal-incorrect-pwd"),
+        closeModal: document.querySelectorAll(".close")[0],
+        closeModalEmail: document.querySelectorAll(".close-email")[0],
+        closeModalPwd: document.querySelectorAll(".close-pwd")[0],
     };
 
     const regexPatterns = {
         emailRegex: /^[a-z0-9]+@[a-z0-9]+\.[a-z]{2,4}$/,
-        passwordRegex:/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$/,
-    }
+        passwordRegex: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$/,
+    };
 
     listaCorreos();
 
-    Object.values(elements).forEach(element => {
-        element.addEventListener('mouseover', function () {
-            element.style.backgroundColor = '#f0f0f0';
+    /*Object.values(elements).forEach((element) => {
+        element.addEventListener("mouseover", function () {
+            element.style.backgroundColor = "#f0f0f0";
         });
 
-        element.addEventListener('mouseout', function () {
-            element.style.backgroundColor = '';
+        element.addEventListener("mouseout", function () {
+            element.style.backgroundColor = "";
+        });
+    });*/
+
+    elements.camps.forEach((text) => {
+        text.addEventListener("mousemove", () => {
+            text.classList.add("hovered");
+        });
+
+        text.addEventListener("mouseout", () => {
+            text.classList.remove("hovered");
         });
     });
 
-    elements.camps.forEach(text => {
-        text.addEventListener('mousemove', () => {
-            text.classList.add('hovered');
-        });
-
-        text.addEventListener('mouseout', () => {
-            text.classList.remove('hovered');
-        });
-    });
-
-    Object.values(elements).forEach(element => {
+    /*Object.values(elements).forEach((element) => {
         if (element !== elements.form) {
-            element.addEventListener('input', (event) => {
+            element.addEventListener("input", (event) => {
                 validarCamps(element);
             });
         }
-    });
+    });*/
 
-    elements.form.addEventListener('submit', function (event) {
+    elements.form.addEventListener("submit", function (event) {
         let correu = elements.email.value;
         let contrasenya = elements.password.value;
 
         let isValid = true;
 
-        if (!regexPatterns.emailRegex.test(correu) || !regexPatterns.passwordRegex.test(contrasenya)) {
+        if (
+            !regexPatterns.emailRegex.test(correu) ||
+            !regexPatterns.passwordRegex.test(contrasenya)
+        ) {
             event.preventDefault();
             if (!regexPatterns.emailRegex.test(correu)) {
-                elements.modalIncorrect.style.display = 'block';
+                elements.modalIncorrect.style.display = "block";
                 elements.closeModalEmail.onclick = function () {
-                    elements.modalIncorrect.style.display = 'none';
+                    elements.modalIncorrect.style.display = "none";
                 };
                 window.onclick = function (event) {
                     if (event.target == elements.modalIncorrect) {
-                        elements.modalIncorrect.style.display = 'none';
+                        elements.modalIncorrect.style.display = "none";
                     }
                 };
                 isValid = false;
             } else if (!regexPatterns.passwordRegex.test(contrasenya)) {
                 Swal.fire({
-                    icon: 'error',
-                    title: 'Oops...',
-                    text: 'La contrasenya ha de contindre almenys 8 caràcters, una majúscula, una minúscula, un número i un dels següents caràcters especials: -_'
+                    icon: "error",
+                    title: "Oops...",
+                    text: "La contrasenya ha de contindre almenys 8 caràcters, una majúscula, una minúscula, un número i un dels següents caràcters especials: -_",
                 });
             }
         } else {
             event.preventDefault();
-            elements.errorMessage.textContent = '';
-            elements.modalCorrect.style.display = 'block';
+            elements.errorMessage.textContent = "";
+            elements.modalCorrect.style.display = "block";
             elements.closeModal.onclick = function () {
-                elements.modalCorrect.style.display = 'none';
+                elements.modalCorrect.style.display = "none";
             };
             window.onclick = function (event) {
                 if (event.target == elements.modalCorrect) {
-                    elements.modalCorrect.style.display = 'none';
+                    elements.modalCorrect.style.display = "none";
                 }
             };
-            elements.successMessage.style.color = '#181d33';
+            elements.successMessage.style.color = "#181d33";
 
             document.cookie = `email=${correu}; path=/`;
             document.cookie = `loggedIn=true; path=/`;
@@ -99,46 +101,58 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
     function validarCamps(data) {
         if (data.validity.patternMismatch || data.value === "") {
-            data.classList.remove('valid');
-            data.classList.add('invalid');
-        }
-        else {
-            data.classList.remove('invalid');
-            data.classList.add('valid');
+            data.classList.remove("valid");
+            data.classList.add("invalid");
+        } else {
+            data.classList.remove("invalid");
+            data.classList.add("valid");
         }
     }
 
     function listaCorreos() {
-        elements.email.addEventListener('input', function () {
+        elements.email.addEventListener("input", function () {
             let username = this.value;
-            let suggestionsContainer = document.getElementById('suggestions');
-            let domains = ['@gmail.com', '@hotmail.com', '@outlook.com', '@yahoo.com'];
+            let suggestionsContainer = document.getElementById("suggestions");
+            let domains = [
+                "@gmail.com",
+                "@hotmail.com",
+                "@outlook.com",
+                "@yahoo.com",
+            ];
 
-            suggestionsContainer.innerHTML = '';
+            suggestionsContainer.innerHTML = "";
 
             domains.forEach(function (domain) {
-                let suggestion = document.createElement('li');
+                let suggestion = document.createElement("li");
                 suggestion.textContent = username + domain;
-                suggestion.addEventListener('click', function () {
+                suggestion.addEventListener("click", function () {
                     elements.email.value = suggestion.textContent;
-                    suggestionsContainer.innerHTML = '';
-                    elements.email.setCustomValidity('');
+                    suggestionsContainer.innerHTML = "";
+                    elements.email.setCustomValidity("");
                 });
                 suggestionsContainer.appendChild(suggestion);
             });
 
-            if (domains.some(domain => username.length > 0)) {
-                suggestionsContainer.classList.add('show');
+            if (domains.some((domain) => username.length > 0)) {
+                suggestionsContainer.classList.add("show");
             } else {
-                suggestionsContainer.classList.remove('show');
+                suggestionsContainer.classList.remove("show");
             }
         });
 
-        document.addEventListener('click', function (event) {
-            if (!document.getElementById('suggestions').contains(event.target)) {
-                document.getElementById('suggestions').classList.remove('show');
+        document.addEventListener("click", function (event) {
+            if (!document.getElementById("suggestions").contains(event.target)) {
+                document.getElementById("suggestions").classList.remove("show");
                 elements.email.checkValidity();
             }
         });
     }
+
+    const menuBtn = document.getElementById("mcMenuBtn");
+    const navHeader = document.querySelector(".nav-header");
+
+    menuBtn.addEventListener("click", function () {
+        navHeader.classList.toggle("show");
+        console.log("click");
+    });
 });

@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz@9..40&family=Ubuntu:wght@300&display=swap');
 
 * {
     margin: 0;
@@ -9,7 +10,7 @@
 body {
     background-color: #e7e7e9ff;
     font-size: 1rem;
-    font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: 'Dm Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 header {
@@ -39,18 +40,25 @@ footer {
 }
 
 .img-logo-header {
-    width: 3.125rem;
-    margin: 0.9375rem 0 0.625rem 0;
+    width: 3rem;
+    margin: 0.9rem 0 0.6rem 0;
+}
+
+#mcMenuBtn {
+    margin-top: 0rem;
+    margin-bottom:0.3rem;
+    display: none;
 }
 
 .nav-header {
     height: 100%;
+    width: auto;
 }
 
 .nav-header>ul {
     display: flex;
     justify-content: center;
-    gap: 3.125rem;
+    gap: 3rem;
 }
 
 .nav-header>ul>li {
@@ -60,7 +68,6 @@ footer {
 .nav-header>ul>li>a {
     color: #e7d381;
     font-size: 1.25rem;
-    font-family: 'Ubuntu', sans-serif;
     text-decoration: none;
 }
 
@@ -79,7 +86,7 @@ a:hover {
 }
 
 .grup-icones>ul>li>a>img {
-    width: 1.875rem;
+    width: 1.8rem;
 }
 
 .busqueda {
@@ -88,7 +95,7 @@ a:hover {
 }
 
 .barra-busqueda {
-    border-top-left-radius: 0.3125rem;
+    border-top-left-radius: 0.3rem;
     border-bottom-left-radius: 0.3125rem;
     border: 0;
     padding: 0rem 1.25rem 0.3125rem 1.25rem;
@@ -298,150 +305,71 @@ hr {
     margin-bottom: 6.25rem;
 }
 
-.nav-footer>ul>li>p {
+.nav-footer > ul > li > p {
     color: #e7d381;
 }
 
-@media screen and (max-width:768px) {
+@media screen and (max-width:600px) {
+
+    .grup-icones > ul {
+        gap: 0.6rem;
+    }
+
+    .grup-icones > ul > li > a > img {
+        width: 1.25rem;
+    }
+    
     .nav-header {
-        display: none;
+        display: flex;
     }
 
-    .hamburger {
-        position: fixed;
-        background-color: transparent;
-        left: 380px;
-        top: 10px;
-        height: 30px;
-        width: 30px;
-        padding: 20px 20px;
-        -webkit-transform: translate3d(0, 0, 0);
-        transform: translate3d(0, 0, 0);
-        -webkit-transition: -webkit-transform 0.25s cubic-bezier(0.05, 1.04, 0.72, 0.98);
-        transition: transform 0.25s cubic-bezier(0.05, 1.04, 0.72, 0.98);
-        z-index: 1002;
-        cursor: pointer;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none
-    }
-
-    .hamburger.is-active {
-        background-color: none;
-    }
-
-    ._layer {
-        background: #e7d381;
-        margin-bottom: 4px;
-        border-radius: 2px;
-        width: 28px;
-        height: 4px;
-        opacity: 1;
-        -webkit-transform: translate3d(0, 0, 0);
-        transform: translate3d(0, 0, 0);
-        -webkit-transition: all 0.25s cubic-bezier(0.05, 1.04, 0.72, 0.98);
-        transition: all 0.25s cubic-bezier(0.05, 1.04, 0.72, 0.98);
-    }
-
-    .hamburger:hover .-top {
-        -webkit-transform: translateY(-100%);
-        -ms-transform: translateY(-100%);
-        transform: translateY(-100%);
-    }
-
-    .hamburger:hover .-bottom {
-        -webkit-transform: translateY(50%);
-        -ms-transform: translateY(100%);
-        transform: translateY(100%);
-    }
-
-    .hamburger.is-active .-top {
-        -webkit-transform: translateY(200%) rotate(45deg) !important;
-        -ms-transform: translateY(200%) rotate(45deg) !important;
-        transform: translateY(200%) rotate(45deg) !important;
-    }
-
-    .hamburger.is-active .-mid {
-        opacity: 0;
-    }
-
-    .hamburger.is-active .-bottom {
-        -webkit-transform: translateY(-200%) rotate(135deg) !important;
-        -ms-transform: translateY(-200%) rotate(135deg) !important;
-        transform: translateY(-200%) rotate(135deg) !important;
-    }
-
-    .menuppal.is_active {
-        transform: translate3d(0px, 0px, 0px);
-    }
-
-    .menuppal {
-        background-color: #181d33;
-        bottom: 0;
-        height: 100%;
-        left: 0;
-        overflow-y: scroll;
-        position: fixed;
-        top: 0;
-        transform: translate3d(0px, -100%, 0px);
-        transition: transform 0.35s cubic-bezier(0.05, 1.04, 0.72, 0.98) 0s;
-        width: 100%;
-        z-index: 1001;
-    }
-
-    .menuppal ul {
-        margin: 0;
-        padding: 0;
-    }
-
-    .menuppal ul li {
+    .nav-header ul {
         list-style: none;
-        text-align: center;
-        font-family: 'Ubuntu', Arial, Helvetica;
-        color: #aa8e31;
-        font-weight: bold;
-        font-size: 1.5rem;
-        line-height: 3em;
-        height: 3em;
-        text-transform: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
     }
 
-    .menuppal ul li a {
-        text-decoration: none;
-        color: #e7d381;
+    .busqueda {
+        display: block;
     }
 
-    .menuppal ul li a:hover {
-        text-decoration: none;
-        color: #aa8e31;
+    .menu-icon {
+        display: block;
     }
 
-    .grup-icones>ul {
-        gap: 1.5rem;
+    .logo {
+        position: relative;
+    }
+
+    #mcMenuBtn {
+        display: inline;
+        margin: auto 5%;
+        background-color: #aa8e31;
+        border: none;
+        color: #181d33;
+    }
+
+    .barra-busqueda {
+        width: 75%;
     }
 
     .busqueda {
         display: flex;
+        flex-direction: row;
         justify-content: center;
     }
-    
+
+    .barra-busqueda,
+    .busqueda > button {
+        border-radius: 0.3rem;
+    }
+
     .barra-busqueda {
-        border-top-left-radius: 0.3125rem;
-        border-bottom-left-radius: 0.3125rem;
-        border: 0;
-        padding: 0rem 1rem 0.3rem 1rem;
-        height: 100%;
+        padding: 0.3rem 1.25rem; 
     }
-    
-    .busqueda>button {
-        background-color: #aa8e31;
-        border-top-right-radius: 0.3125rem;
-        border-bottom-right-radius: 0.3125rem;
-        border: 0;
-    }
-    
-    .busqueda>button>img {
-        width: 0.625rem;
+
+    .busqueda > button > img {
+        width: 1.25rem;
     }
 }
