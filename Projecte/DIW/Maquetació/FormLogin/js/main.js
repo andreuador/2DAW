@@ -2,13 +2,17 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
     let email = document.getElementById("email");
     let password = document.getElementById("password");
+
     let form = document.getElementById("form-control");
     let camps = document.querySelectorAll(".form-group");
+
     let errorMessage = document.getElementById('errorMessage');
     let successMessage = document.getElementById('successMessage');
+
     let modalCorrect = document.getElementById('modal-correct');
     let modalIncorrect = document.getElementById('modal-incorrect-email');
     let modalPwd = document.getElementById('modal-incorrect-pwd');
+    
     let closeModal = document.querySelectorAll('.close')[0];
     let closeModalEmail = document.querySelectorAll('.close-email')[0];
     let closeModalPwd = document.querySelectorAll('.close-pwd')[0];
