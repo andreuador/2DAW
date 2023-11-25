@@ -21,16 +21,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
     listaCorreos();
 
-    /*Object.values(elements).forEach((element) => {
-        element.addEventListener("mouseover", function () {
-            element.style.backgroundColor = "#f0f0f0";
-        });
-
-        element.addEventListener("mouseout", function () {
-            element.style.backgroundColor = "";
-        });
-    });*/
-
     elements.camps.forEach((text) => {
         text.addEventListener("mousemove", () => {
             text.classList.add("hovered");
@@ -41,13 +31,21 @@ document.addEventListener("DOMContentLoaded", (event) => {
         });
     });
 
-    /*Object.values(elements).forEach((element) => {
-        if (element !== elements.form) {
-            element.addEventListener("input", (event) => {
-                validarCamps(element);
-            });
-        }
-    });*/
+    elements.email.addEventListener("mouseover", function () {
+        this.style.backgroundColor = "#f0f0f0";
+    });
+    
+    elements.email.addEventListener("mouseout", function () {
+        this.style.backgroundColor = "";
+    });
+    
+    elements.email.addEventListener("mousemove", () => {
+        elements.email.classList.add("hovered");
+    });
+    
+    elements.email.addEventListener("mouseout", () => {
+        elements.email.classList.remove("hovered");
+    });
 
     elements.form.addEventListener("submit", function (event) {
         let correu = elements.email.value;
@@ -148,11 +146,14 @@ document.addEventListener("DOMContentLoaded", (event) => {
         });
     }
 
-    const menuBtn = document.getElementById("mcMenuBtn");
-    const navHeader = document.querySelector(".nav-header");
+    /**
+     * mcMenu per al mòbil
+     */
 
-    menuBtn.addEventListener("click", function () {
-        navHeader.classList.toggle("show");
-        console.log("click");
+    let mcMenuBtn = document.getElementById('mcMenuBtn');
+    let mcMenuUl = document.querySelector('.mcMenu > ul');
+
+    mcMenuBtn.addEventListener('click', function () {
+        mcMenuUl.style.display = (mcMenuUl.style.display === 'none' || mcMenuUl.style.display === '') ? 'block' : 'none';
     });
 });
