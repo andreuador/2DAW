@@ -1,0 +1,229 @@
+
+
+body{
+    background-color: #e7e7e9ff;
+}
+
+#imgescut{
+    height: 40px;
+    margin-top: 20px;
+    display:inline-block;
+    float: left;
+    padding-top: 20px;
+    
+   
+}
+#imgescut2{
+    height: 40px;
+    margin-top: 0px;
+    display:inline-block;
+    float: right;
+    padding-top: 30px;
+}
+
+#imgescut3{
+    height: 40px;
+    padding-top: 0px;
+    float: left;
+    
+    
+   
+}
+
+#barrasuperior{
+    background-color:#181d33ff;
+    padding-bottom: 20px;
+}
+
+#textoheader{
+    color: white;
+    display:inline-flex;
+    text-align: justify;
+    height: 30px;
+    width: 10%;
+   padding-left: 50px;
+   margin-top: 30px;
+   padding-top: 20px;
+   font-size: x-large;
+    
+}
+
+#busqueda{
+    display:inline-flex;
+    text-align: center;
+    padding-left: 0%;
+    color: white;
+    
+}
+
+#hipervinculos{
+    text-align: right;
+    margin-top: -4%;
+    margin: 0%;
+    display: inline;
+    padding-top: 50%;
+    
+    
+}
+#hipervinculos2{ 
+    /*border-right: 2px solid black; */
+    height: 100%;
+    margin: 0%;
+    padding-right: 0%;
+    text-align: center;
+    float: left;
+    
+}
+.encuadre{
+    margin:0px;
+    padding:30px;
+    border:2px solid black; 
+    display: block;
+    padding-right: 20px;
+    color: black;
+    text-decoration: none;
+    padding-bottom: 20%;
+    
+}
+
+#barraUser{
+    background-color: #181d33ff;
+    border:0cap;
+    padding: 0%;
+    margin-top: 0%;
+    
+}
+#myForm{
+    background-color: #181d33ff;
+}
+#linksUser{
+    color: black;
+    text-decoration: none;
+    padding-right: 0.5%;
+    background-color: #181d33ff;
+}
+
+#titulo{
+    display:block;
+    float: left;
+    padding-left: 50px;
+}
+.col-9{
+    flex: 50%;
+    border-left:2px solid black;
+    margin-left: -16.2%;
+    
+}
+.col-3{
+    padding: 0%;
+}
+
+#formulario{
+    display: block;
+    text-align: center;
+    margin-top: 5%;
+    margin-left:20%;
+    
+    
+}
+#domicilioForm{
+    margin:-4px;
+    margin-top: 4%;
+    border:2px solid black;
+    padding-bottom: 5%;
+    padding-top: 5%;
+    width: 45%;
+    margin-left: 0%;
+    padding-right: 10%;
+    padding-left: 10%;
+   
+
+}
+#botonGuardar{
+    float: right;
+    background-color: #aa8e31ff;
+}
+
+#footer{
+    background-color: #181d33ff;
+    color: white;
+    height:100%;
+    text-align: center;
+    margin-top: 4%;
+    
+}
+.footerLinks{
+    color: white;
+    text-decoration: none;
+}
+#imgescutFooter{
+    height: 80px;
+    margin-top: 20px;
+    display:inline-block;
+}
+
+#imgeUser{
+    height: 40px;
+
+   
+    
+}
+.input{
+    width: 90%;
+}
+/*Modificar input de busqueda*/
+#search{
+    width: 50%;
+    
+}
+#titulosearch{
+    margin-left: 20%;
+}
+
+
+/*Menu Móvil*/
+.encuadre2{
+    margin:-3px; 
+    display: block;
+    padding-right: 50px;
+    color: white;
+    text-decoration: none;
+    
+}
+#imatgeUser{
+    padding-left: 0%;
+    
+}
+.menu {
+    display: none; /* ocultar el menú por defecto */
+  }
+  
+  @media (max-width: 768px) { /* definir el ancho máximo para dispositivos móviles */
+    #hipervinculos2{
+        display: none;
+    }
+    #domicilioForm{
+        margin-top: 24%;
+    }
+    .menu {
+        padding-left: 50px;
+      display: inline; /* mostrar el menú cuando se cumple la condición del media query */
+    }
+    
+    .toggle-btn {
+      display: block; /* mostrar el botón de despliegue en dispositivos móviles */
+      cursor: pointer;
+      font-size: 20px;
+      padding: 10px;
+    }
+    
+    .menu-items {
+      display: none; /* ocultar los elementos del menú por defecto */
+    }
+    
+    #toggle:checked ~ .menu-items {
+      display: block; /* mostrar los elementos del menú al hacer clic en el botón de despliegue */
+    }
+  }
+
+  /* gab:20px; para incrementar el espacio entre elementos */

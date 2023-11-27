@@ -13,7 +13,7 @@ function main() {
             Tipo: "Profesional",
             Descuento: "0%",
             Total: "500.000€",
-            Comprador: "Alberto Juan"
+            Comprador: "Juan Alberto"
         },
         {
             ID: "02",
@@ -26,7 +26,7 @@ function main() {
             Tipo: "Profesional",
             Descuento: "0%",
             Total: "1.200.000€",
-            Comprador: "Isabel María"
+            Comprador: "Maria Isabel"
         },
         {
             ID: "03",

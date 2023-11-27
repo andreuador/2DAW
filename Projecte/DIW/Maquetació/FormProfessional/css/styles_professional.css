@@ -9,7 +9,7 @@
 body {
     background-color: #e7e7e9ff;
     font-size: 1rem;
-    font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 header {
@@ -115,7 +115,6 @@ a:hover {
 /* Main */
 
 main {
-    font-family: 'Ubuntu', sans-serif;
     height: 100%;
     width: 100%;
     margin-top: 6.875rem;
@@ -145,7 +144,7 @@ label {
 input {
     padding: 8px;
     font-size: 16px;
-    border: 2px solid black;
+    border: 2px solid transparent;
     border-radius: 5px;
 }
 
@@ -286,7 +285,6 @@ hr {
 .nav-footer>ul>li>a {
     color: #e7d381;
     font-size: 0.75rem;
-    font-family: 'Playfair Display', serif;
     margin-bottom: 6.25rem;
 }
 

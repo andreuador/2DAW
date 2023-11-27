@@ -54,6 +54,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
     elements.name.addEventListener("input", (event) => {
         validarCamps(elements.name);
+        console.log(elements.name.value);
     });
 
     elements.surname.addEventListener("input", (event) => {

@@ -1,0 +1,431 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz@9..40&family=Ubuntu:wght@300&display=swap');
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #e7e7e9ff;
+    font-size: 1rem;
+    font-family: 'DMSans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/*--------------------------------- Header ---------------------------------------------*/
+
+header {
+    background-color: #181d33;
+    position: fixed;
+    right: 0;
+    left: 0;
+    width: 100%;
+    top: 0;
+    z-index: 1;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.img-logo-header {
+    width: 3rem;
+    margin: 0.9rem 0 0.6rem 0;
+}
+
+#mcMenuBtn {
+    margin-top: 0rem;
+    margin-bottom:0.3rem;
+    display: none;
+}
+
+.nav-header {
+    height: 100%;
+    width: auto;
+}
+
+.nav-header > ul {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    padding: 0;
+}
+
+.nav-header > ul > li {
+    list-style: none;
+}
+
+.nav-header > ul > li > a {
+    color: #e7d381;
+    font-size: 1.25rem;
+    text-decoration: none;
+}
+
+.nav-header > ul > li > a:hover {
+    color: #aa8e31;
+}
+
+.grup-icones > ul {
+    display: flex;
+    justify-content: flex-end;
+    gap: 5rem;
+}
+
+.grup-icones > ul > li {
+    list-style: none;
+}
+
+img {
+    width: 1.8rem;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+img:hover {
+    opacity: 0.4;
+}
+
+.busqueda {
+    display: flex;
+    justify-content: center;
+}
+
+.barra-busqueda {
+    border-top-left-radius: 0.3rem;
+    border-bottom-left-radius: 0.3rem;
+    border: 0;
+    padding: 0rem 1.25rem 0.3125rem 1.25rem;
+    height: 100%;
+}
+
+.busqueda > button {
+    background-color: #aa8e31;
+    border-top-right-radius: 0.3rem;
+    border-bottom-right-radius: 0.3rem;
+    border: 0;
+}
+
+.busqueda > button > img {
+    width: 1rem;
+}
+
+/* Ocultar el menu per al escritori */
+
+.menuppal {
+    display: none;
+}
+
+/*--------------------------------- Main ---------------------------------------------*/
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    margin-top: 6.8rem;
+    margin-bottom: 9.3rem;
+}
+
+.perfil {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#form-control {
+    background-color: #181d33;
+    padding: 2rem; /* Ajusta el relleno según sea necesario */
+    border-radius: 0.3rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Añade una sombra si es necesario */
+}
+
+.form-group {
+    margin-bottom: 1.25rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.3rem;
+    color: white;
+}
+
+.menu-usuario {
+    display: none;
+}
+
+.menu-usuario.menu-usuario-visible {
+    display: block;
+}
+
+.menu-usuario {
+    display: none;
+    position: absolute;
+    top: 3.75rem;
+    right: 22.1rem;
+    background-color: #181d33;
+    border: 1px solid #aa8e31;
+    border-radius: 0.3rem;
+    padding: 0.5rem;
+    z-index: 2;
+}
+
+.menu-usuario ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-usuario li {
+    margin-bottom: 0.5rem;
+}
+
+.menu-usuario a {
+    text-decoration: none;
+    color: #e7d381;
+    font-size: 0.9rem;
+}
+
+.menu-usuario a:hover {
+    color: #aa8e31;
+}
+
+#submit {
+    background-color: #e7d381ff;
+    color: white;
+    padding: 0.6rem 6.25rem;
+    border: none;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    margin: 0.6rem;
+    display: flex;
+    align-items: center;
+}
+
+#submit:hover {
+    background-color: #aa8e31ff;
+}
+
+/* Estilos para el modal */
+.modal-correct, .modal-incorrect-email, .modal-incorrect-pwd {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 1.25rem;
+    border: 0rem solid #888;
+    width: 80%;
+    text-align: center;
+}
+
+.close, .close-email, .close-pwd {
+    color: #aaa;
+    float: right;
+    font-size: 1.75rem;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus,
+.close-email:hover,
+.close-emial:focus,
+.close-pwd:hover,
+.close-pwd:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/*--------------------------------- Footer ---------------------------------------------*/
+
+footer {
+    background-color: #181d33;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.25rem;
+}
+
+.logo-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0.9rem;
+}
+
+.logo-footer > a {
+    margin: 0.6rem;
+    color: #e7d381;
+    font-size: 1.1rem;
+    text-decoration: none;
+}
+
+.logo-footer > a:hover {
+    color: #aa8e31;
+}
+
+.img-logo-footer {
+    width: 3.1rem;
+}
+
+.nav-footer {
+    height: 100%;
+}
+
+hr {
+    margin: 0.9rem 1.8rem;
+    border-color: #aa8e31;
+}
+
+.nav-footer > ul {
+    display: flex;
+    justify-content: flex-start;
+    gap: 1.25rem;
+}
+
+.nav-footer > ul > li {
+    list-style: none;
+}
+
+.nav-footer > ul > li > a, p {
+    color: #e7d381;
+    font-size: 0.75rem;
+}
+
+.nav-footer > ul > li > a:hover {
+    color: #aa8e31;
+}
+
+@media screen and (min-width: 601px) {
+    .mcMenu {
+        display: none;
+    }
+}
+
+/*--------------------------------- Mòbil ---------------------------------------------*/
+@media screen and (max-width:600px) {
+
+    .grup-icones > ul {
+        gap: 0.6rem;
+    }
+
+    .grup-icones > ul > li > a > img {
+        width: 1.25rem;
+    }
+
+    .nav-header {
+        display: none;
+    }
+
+    .logo {
+        position: relative;
+    }
+
+    #mcMenuBtn {
+        display: inline;
+        margin: auto 50%;
+        background-color: #aa8e31;
+        border: none;
+        color: #181d33;
+        cursor: pointer;
+        padding: 0.5rem;
+        border-radius: 0.3rem;
+    }
+
+    #mcMenuBtn:hover {
+        background-color: #918029;
+    }
+
+    .mcMenu > ul {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 0;
+        text-align: center;
+        background-color: #181d33; /* Color de fondo del menú */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra */
+        border-radius: 0.3rem;
+        margin-top: 5px; /* Espacio entre el botón y el menú */
+        animation: slideIn 0.3s ease-out; /* Animación de entrada */
+    }
+
+    .mcMenu > ul > li {
+        list-style: none;
+        padding: 0.5rem;
+    }
+
+    .mcMenu > ul > li > a {
+        text-decoration: none;
+        cursor: pointer;
+        color: #aa8e31;
+    }
+
+    .mcMenu > ul > li > a:hover {
+        color: #e7d381;
+    }
+
+    @keyframes slideIn {
+        from {
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .barra-busqueda {
+        width: 75%;
+        margin-left: 5%;
+    }
+
+    .busqueda {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-left: 5%;
+    }
+
+    .barra-busqueda,
+    .busqueda > button {
+        border-radius: 0.3rem;
+    }
+
+    .barra-busqueda {
+        padding: 0.3rem 1.25rem; 
+    }
+
+    .busqueda > button > img {
+        width: 1.25rem;
+    }
+
+    .menu-usuario {
+        display: none;
+        position: absolute;
+        top: 3.75rem;
+        right: 0px;
+        background-color: #181d33;
+        border: 1px solid #aa8e31;
+        border-radius: 0.3rem;
+        padding: 0.5rem;
+        z-index: 2;
+    }
+}
