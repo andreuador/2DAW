@@ -83,48 +83,56 @@
 							<img src="img/vehicles/ferrari.jpg" alt="Ferrari Enzo">
 							<p class="car-description">Ferrari Enzo</p>
 							<p class="car-price">5.400.000 €</p>
+							<button class="like-button" onclick="likeButtonClick(this)">Me gusta</button>
 						</div>
 						<div class="favorits-group">
-							<img src="img/vehicles/mclaren.jpg" alt="Ferrari Enzo">
+							<img src="img/vehicles/mclaren.jpg" alt="Mclaren P1">
 							<p class="car-description">Mclaren P1</p>
 							<p class="car-price">4.238.900 €</p>
+							<button class="like-button" onclick="likeButtonClick(this)">Me gusta</button>
 						</div>
 						<div class="favorits-group">
-							<img src="img/vehicles/ford.jpg" alt="Ferrari Enzo">
+							<img src="img/vehicles/ford.jpg" alt="Ford GT">
 							<p class="car-description">Ford GT</p>
 							<p class="car-price">1.668.900 €</p>
+							<button class="like-button" onclick="likeButtonClick(this)">Me gusta</button>
 						</div>
 						<div class="favorits-group">
-							<img src="img/vehicles/lamborghini.jpg." alt="Ferrari Enzo">
+							<img src="img/vehicles/lamborghini.jpg" alt="Lamborghini Centenario">
 							<p class="car-description">Lamborghini Centenario</p>
 							<p class="car-price">4.075.000 €</p>
+							<button class="like-button" onclick="likeButtonClick(this)">Me gusta</button>
 						</div>
 						<div class="favorits-group">
-							<img src="img/vehicles/porsche.jpeg" alt="Ferrari Enzo">
-							<p class="car-description">Ferrari Enzo</p>
-							<p class="car-price">$1,000,000</p>
+							<img src="img/vehicles/porsche.jpeg" alt="Porsche GT3 RS">
+							<p class="car-description">Porsche GT3 RS</p>
+							<p class="car-price">3.628.000 €</p>
+							<button class="like-button" onclick="likeButtonClick(this)">Me gusta</button>
 						</div>
 						<div class="favorits-group">
-							<img src="img/vehicles/mclaren.jpg" alt="Ferrari Enzo">
-							<p class="car-description">Ferrari Enzo</p>
-							<p class="car-price">$1,000,000</p>
+							<img src="img/vehicles/bentley.jpg" alt="Bentley Continental GT">
+							<p class="car-description">Bentley Continental GT</p>
+							<p class="car-price">435.866 €</p>
+							<button class="like-button" onclick="likeButtonClick(this)">Me gusta</button>
 						</div>
 						<div class="favorits-group">
-							<img src="img/vehicles/mclaren.jpg" alt="Ferrari Enzo">
-							<p class="car-description">Ferrari Enzo</p>
-							<p class="car-price">$1,000,000</p>
+							<img src="img/vehicles/ferrarigtb.jpg" alt="Ferrari 488 GTB">
+							<p class="car-description">Ferrari 488 GTB</p>
+							<p class="car-price">303.749 €</p>
+							<button class="like-button" onclick="likeButtonClick(this)">Me gusta</button>
 						</div>
 						<div class="favorits-group">
-							<img src="img/vehicles/mclaren.jpg" alt="Ferrari Enzo">
-							<p class="car-description">Ferrari Enzo</p>
-							<p class="car-price">$1,000,000</p>
+							<img src="img/vehicles/bugatti.jpg" alt="Bugatti Chiron">
+							<p class="car-description">Bugatti Chiron</p>
+							<p class="car-price">9.792.500 €</p>
+							<button class="like-button" onclick="likeButtonClick(this)">Me gusta</button>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</main>
-	
+
 
 	<footer>
 		<div class="container">
@@ -188,6 +196,23 @@
 			}
 		});
 	});
+
+	function likeButtonClick(button) {
+		// Verifica si el botón ya ha sido marcado como "Me gusta"
+		if (button.classList.contains('liked')) {
+			// Si ya le gustaba, cambia el estilo y el texto para indicar que ya no le gusta
+			button.classList.remove('liked');
+			button.style.backgroundColor = '';
+			button.style.color = '';
+			button.innerHTML = 'Me gusta';
+		} else {
+			// Si no le gustaba, cambia el estilo y el texto para indicar que le gusta
+			button.classList.add('liked');
+			button.style.backgroundColor = 'green';
+			button.style.color = 'white';
+			button.innerHTML = '¡Te gusta!';
+		}
+	}
 </script>
 
 </html>

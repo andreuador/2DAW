@@ -196,6 +196,12 @@ main {
     margin: 0.6rem;
 }
 
+.like-button.liked {
+    background-color: green;
+    color: white;
+    border: none;
+}
+
 /*--------------------------------- Footer ---------------------------------------------*/
 
 footer {
