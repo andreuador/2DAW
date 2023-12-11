@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="bb981196-4b8a-4aec-b532-7f127da92ccf" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Projecte/DIW/Maquetació/PerfilUsuari/css/grid.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Projecte/DIW/Maquetació/PerfilUsuari/css/normalize.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Projecte/DIW/Maquetació/PerfilUsuari/css/styles_usuari.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Projecte/DIW/Maquetació/PerfilUsuari/img/PendentEnvio-Groc.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Projecte/DIW/Maquetació/PerfilUsuari/img/PendentEnvio-GrocOscur.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Projecte/DIW/Maquetació/PerfilUsuari/img/PendentEnvio.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Projecte/DIW/Maquetació/PerfilUsuari/img/ajustes-Groc.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Projecte/DIW/Maquetació/PerfilUsuari/img/ajustes-GrocOscur.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Projecte/DIW/Maquetació/PerfilUsuari/img/ajustes.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Projecte/DIW/Maquetació/PerfilUsuari/img/busqueda-Groc.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Projecte/DIW/Maquetació/PerfilUsuari/img/busqueda-GrocOscur.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Projecte/DIW/Maquetació/PerfilUsuari/img/busqueda.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Projecte/DIW/Maquetació/PerfilUsuari/img/canvi-Groc.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Projecte/DIW/Maquetació/PerfilUsuari/img/canvi-GrocOscur.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Projecte/DIW/Maquetació/PerfilUsuari/img/canvi.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Projecte/DIW/Maquetació/PerfilUsuari/img/color-Groc.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Projecte/DIW/Maquetació/PerfilUsuari/img/color-GrocOscur.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Projecte/DIW/Maquetació/PerfilUsuari/img/color.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Projecte/DIW/Maquetació/PerfilUsuari/img/combustible-Groc.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Projecte/DIW/Maquetació/PerfilUsuari/img/combustible-GrocOscur.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Projecte/DIW/Maquetació/PerfilUsuari/img/combustible.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Projecte/DIW/Maquetació/PerfilUsuari/img/contacte-Groc.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Projecte/DIW/Maquetació/PerfilUsuari/img/contacte-GrocOscur.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Projecte/DIW/Maquetació/PerfilUsuari/img/contacte.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Projecte/DIW/Maquetació/PerfilUsuari/img/cv-Groc.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Projecte/DIW/Maquetació/PerfilUsuari/img/cv-GrocOscur.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Projecte/DIW/Maquetació/PerfilUsuari/img/cv.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Projecte/DIW/Maquetació/PerfilUsuari/img/descripcio-Groc.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Projecte/DIW/Maquetació/PerfilUsuari/img/descripcio-GrocOscur.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Projecte/DIW/Maquetació/PerfilUsuari/img/descripcio.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Projecte/DIW/Maquetació/PerfilUsuari/img/enReparto-Groc.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Projecte/DIW/Maquetació/PerfilUsuari/img/enReparto-GrocOscur.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Projecte/DIW/Maquetació/PerfilUsuari/img/enReparto.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Projecte/DIW/Maquetació/PerfilUsuari/img/enviat-Groc.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Projecte/DIW/Maquetació/PerfilUsuari/img/enviat-GrocOscur.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Projecte/DIW/Maquetació/PerfilUsuari/img/enviat.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Projecte/DIW/Maquetació/PerfilUsuari/img/estat-Groc.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Projecte/DIW/Maquetació/PerfilUsuari/img/estat-GrocOscur.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Projecte/DIW/Maquetació/PerfilUsuari/img/estat.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Projecte/DIW/Maquetació/PerfilUsuari/img/garatge-Groc.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Projecte/DIW/Maquetació/PerfilUsuari/img/garatge-GrocOscur.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Projecte/DIW/Maquetació/PerfilUsuari/img/garatge.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Projecte/DIW/Maquetació/PerfilUsuari/img/llistaDeDesitjos-Groc.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Projecte/DIW/Maquetació/PerfilUsuari/img/llistaDeDesitjos-GrocOscur.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Projecte/DIW/Maquetació/PerfilUsuari/img/llistaDeDesitjos.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Projecte/DIW/Maquetació/PerfilUsuari/img/localizacio-Groc.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Projecte/DIW/Maquetació/PerfilUsuari/img/localizacio-GrocOscur.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Projecte/DIW/Maquetació/PerfilUsuari/img/localizacio.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Projecte/DIW/Maquetació/PerfilUsuari/img/logoBHEC.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Projecte/DIW/Maquetació/PerfilUsuari/img/matricula-Groc.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Projecte/DIW/Maquetació/PerfilUsuari/img/matricula-GrocOscur.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Projecte/DIW/Maquetació/PerfilUsuari/img/matricula.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Projecte/DIW/Maquetació/PerfilUsuari/img/notificacio-Groc.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Projecte/DIW/Maquetació/PerfilUsuari/img/notificacio-GrocOscur.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Projecte/DIW/Maquetació/PerfilUsuari/img/notificacio.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Projecte/DIW/Maquetació/PerfilUsuari/img/oferta1-Groc.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Projecte/DIW/Maquetació/PerfilUsuari/img/oferta1-GrocOscur.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Projecte/DIW/Maquetació/PerfilUsuari/img/oferta1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Projecte/DIW/Maquetació/PerfilUsuari/img/oferta2-Groc.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Projecte/DIW/Maquetació/PerfilUsuari/img/oferta2-GrocOscur.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Projecte/DIW/Maquetació/PerfilUsuari/img/oferta2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Projecte/DIW/Maquetació/PerfilUsuari/img/places-Groc.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Projecte/DIW/Maquetació/PerfilUsuari/img/places-GrocOscur.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Projecte/DIW/Maquetació/PerfilUsuari/img/places.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Projecte/DIW/Maquetació/PerfilUsuari/img/portes-Groc.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Projecte/DIW/Maquetació/PerfilUsuari/img/portes-GrocOscur.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Projecte/DIW/Maquetació/PerfilUsuari/img/portes.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Projecte/DIW/Maquetació/PerfilUsuari/img/usuari-Groc.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Projecte/DIW/Maquetació/PerfilUsuari/img/usuari-GrocOscur.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Projecte/DIW/Maquetació/PerfilUsuari/img/usuari.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Projecte/DIW/Maquetació/PerfilUsuari/img/venta-Groc.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Projecte/DIW/Maquetació/PerfilUsuari/img/venta-GrocOscur.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Projecte/DIW/Maquetació/PerfilUsuari/img/venta.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Projecte/DIW/Maquetació/PerfilUsuari/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Projecte/DIW/Maquetació/PerfilUsuari/js/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Projecte/DIW/Maquetació/PerfilUsuari/js/script.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Projecte/DIW/Maquetació/PerfilUsuari/js/script2.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Projecte/DIW/Maquetació/PerfilUsuari/styles.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Projecte/DIW/Maquetació/PerfilUsuari/usuari.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projecte/DIW/Maquetació/Compras/compras.html" beforeDir="false" afterPath="$PROJECT_DIR$/Projecte/DIW/Maquetació/Compras/compras.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projecte/DIW/Maquetació/Compras/css/normalize.css" beforeDir="false" afterPath="$PROJECT_DIR$/Projecte/DIW/Maquetació/Compras/css/normalize.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projecte/DIW/Maquetació/Compras/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/Projecte/DIW/Maquetació/Compras/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projecte/DIW/Maquetació/Domicilio/grid.css" beforeDir="false" afterPath="$PROJECT_DIR$/Projecte/DIW/Maquetació/Domicilio/grid.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projecte/DIW/Maquetació/Domicilio/normalize.css" beforeDir="false" afterPath="$PROJECT_DIR$/Projecte/DIW/Maquetació/Domicilio/normalize.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projecte/DIW/Maquetació/FormLogin/css/styles_login.css" beforeDir="false" afterPath="$PROJECT_DIR$/Projecte/DIW/Maquetació/FormLogin/css/styles_login.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projecte/DIW/Maquetació/FormLogin/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/Projecte/DIW/Maquetació/FormLogin/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projecte/DIW/Maquetació/FormLogin/js/script.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projecte/DIW/Maquetació/FormLogin/js/script2.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projecte/DIW/Maquetació/FormLogin/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/Projecte/DIW/Maquetació/FormLogin/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projecte/DIW/Maquetació/FormProfessional/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/Projecte/DIW/Maquetació/FormProfessional/css/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projecte/DIW/Maquetació/FormProfessional/css/styles_professional.css" beforeDir="false" afterPath="$PROJECT_DIR$/Projecte/DIW/Maquetació/FormProfessional/css/styles_professional.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projecte/DIW/Maquetació/FormProfessional/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Projecte/DIW/Maquetació/FormProfessional/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projecte/DIW/Maquetació/FormProfessional/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/Projecte/DIW/Maquetació/FormProfessional/js/main.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 0
+}]]></component>
+  <component name="ProjectId" id="2ZP65k33Nwt3rYqK7a7g9YxSTtl" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="bb981196-4b8a-4aec-b532-7f127da92ccf" name="Changes" comment="" />
+      <created>1702311186332</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1702311186332</updated>
+      <workItem from="1702311188157" duration="4000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
