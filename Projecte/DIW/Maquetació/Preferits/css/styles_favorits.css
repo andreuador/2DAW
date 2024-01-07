@@ -1,0 +1,42 @@
+/*--------------------------------- Main ---------------------------------------------*/
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    margin-bottom: 6.4rem;
+}
+
+.titol {
+    text-align: center;
+}
+
+.favorits {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.favorits-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+}
+
+.favorits-group > img {
+    width: 15.6rem;
+    height: 10rem;
+}
+
+.car-description {
+    margin: 0.6rem;
+}
+
+.like-button.liked {
+    background-color: green;
+    color: var(--quaternary-color);
+    border: none;
+}

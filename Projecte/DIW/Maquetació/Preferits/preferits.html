@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preferits</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link href="css/Normalize.css" type="text/css" rel="stylesheet">
+    <link href="css/grid.css" type="text/css" rel="stylesheet">
+    <link href="css/variables.css" type="text/css" rel="stylesheet">
+    <link href="css/squeleton-frontend.css" type="text/css" rel="stylesheet">
+    <link href="css/styles_favorits.css" type="text/css" rel="stylesheet">
+    <script src="js/menu-burguer.js" defer></script>
+    <!--<script src="js/main.js" defer></script>
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>-->
+
+</head>
+
+<body>
+    <header class="container-fluid">
+        <div class="row div-header">
+            <div class="col-12">
+                <nav class="first-nav">
+                    <img src="ico/logoBHEC.png" width="50px">
+                    <ul class="hidden">
+                        <li>
+                            <a href="/catalogue_list.php">Catàleg</a>
+                        </li>
+                        <li>
+                            <a href="#">Contacte</a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <div class="searcher-header hidden">
+                    <div>
+                        <input type="text" class="input-searcher-header" placeholder="Buscar...">
+                        <button class="button-searcher-header"><i class="fas fa-search"></i></button>
+                    </div>
+                </div>
+
+                <nav class="header-icons">
+                    <ul>
+                        <li class="hidden-desktop">
+                            <a href="#">
+                                <img src="ico/busqueda-Groc.png" alt="Imatge Notificació" id="busqueda">
+                            </a>
+                        </li>
+                        <li class="hidden">
+                            <a href="#">
+                                <img src="ico/notificacio-Groc.png" alt="Imatge Notificació" id="notificacio">
+                            </a>
+                        </li>
+                        <li class="hidden">
+                            <a href="#">
+                                <img src="ico/llistaDeDesitjos-Groc.png" alt="Imatge Llista De Dessitjos" id="desitjos">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/garage_list.php">
+                                <img src="ico/garatge-Groc.png" alt="Imatge Garatge" id="garatge">
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <img src="ico/usuari-Groc.png" alt="Imatge Usuari" id="usuari">
+                            </a>
+                        </li>
+                        <li>
+                            <nav id="menu-mobile">
+                                <div id="burger">
+                                    <span class="line1"></span>
+                                    <span class="line2"></span>
+                                    <span class="line3"></span>
+                                </div>
+                                <div class="ocultMenu">
+                                    <nav id="main-menu">
+                                        <ul>
+                                            <li>
+                                                <a href="/catalogue_list.php">
+                                                    Catàleg
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="/contacte.html">
+                                                    Contacte
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="/contacte.html">
+                                                    Notificacions
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </nav>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <!-- L'estrctura que segueix és la mateixa que deuríen seguir tots, el grid. Un container conté rows i cada row conté columns. 
+        Jo recomane crear un div dins del column ja que et permetrà controlar el contingut sense alterar els estils del grid  -->
+
+    <main>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="titol">
+                        <h1>Preferits</h1>
+                    </div>
+                    <div class="favorits">
+                        <div class="favorits-group">
+                            <img src="ico/vehicles/ferrari.jpg" alt="Ferrari Enzo">
+                            <p class="car-description">Ferrari Enzo</p>
+                            <p class="car-price">5.400.000 €</p>
+                            <button class="like-button" onclick="likeButtonClick(this)">Me gusta</button>
+                        </div>
+                        <div class="favorits-group">
+                            <img src="ico/vehicles/mclaren.jpg" alt="Mclaren P1">
+                            <p class="car-description">Mclaren P1</p>
+                            <p class="car-price">4.238.900 €</p>
+                            <button class="like-button" onclick="likeButtonClick(this)">Me gusta</button>
+                        </div>
+                        <div class="favorits-group">
+                            <img src="ico/vehicles/ford.jpg" alt="Ford GT">
+                            <p class="car-description">Ford GT</p>
+                            <p class="car-price">1.668.900 €</p>
+                            <button class="like-button" onclick="likeButtonClick(this)">Me gusta</button>
+                        </div>
+                        <div class="favorits-group">
+                            <img src="ico/vehicles/lamborghini.jpg" alt="Lamborghini Centenario">
+                            <p class="car-description">Lamborghini Centenario</p>
+                            <p class="car-price">4.075.000 €</p>
+                            <button class="like-button" onclick="likeButtonClick(this)">Me gusta</button>
+                        </div>
+                        <div class="favorits-group">
+                            <img src="ico/vehicles/porsche.jpeg" alt="Porsche GT3 RS">
+                            <p class="car-description">Porsche GT3 RS</p>
+                            <p class="car-price">3.628.000 €</p>
+                            <button class="like-button" onclick="likeButtonClick(this)">Me gusta</button>
+                        </div>
+                        <div class="favorits-group">
+                            <img src="ico/vehicles/bentley.jpg" alt="Bentley Continental GT">
+                            <p class="car-description">Bentley Continental GT</p>
+                            <p class="car-price">435.866 €</p>
+                            <button class="like-button" onclick="likeButtonClick(this)">Me gusta</button>
+                        </div>
+                        <div class="favorits-group">
+                            <img src="ico/vehicles/ferrarigtb.jpg" alt="Ferrari 488 GTB">
+                            <p class="car-description">Ferrari 488 GTB</p>
+                            <p class="car-price">303.749 €</p>
+                            <button class="like-button" onclick="likeButtonClick(this)">Me gusta</button>
+                        </div>
+                        <div class="favorits-group">
+                            <img src="ico/vehicles/bugatti.jpg" alt="Bugatti Chiron">
+                            <p class="car-description">Bugatti Chiron</p>
+                            <p class="car-price">9.792.500 €</p>
+                            <button class="like-button" onclick="likeButtonClick(this)">Me gusta</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Container-fluid ocupa el 100% de l'amplaria de la pàgina -->
+    <footer class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <!-- Div per controlar tot el contingut sense aplicar classes i id's a column -->
+                <div class="self-container">
+                    <!-- Div per estructurar el logo i el nom de l'empresa -->
+                    <div class="nom-logo">
+                        <img src="ico/logoBHEC.png" alt="Logotip Empresa" width="50px">
+                        <h3>BHEC</h3>
+                    </div>
+                    <!-- Línia separadora -->
+                    <hr class="separator" />
+
+                    <!-- Llista amb els enllaços corresponents -->
+                    <ul class="footer-menu">
+                        <li>
+                            <a href="#">FAQ</a>
+                        </li>
+                        <li>
+                            <a href="#">Terminis i Condicions</a>
+                        </li>
+                        <li>
+                            <a href="#">Política de Privacitat</a>
+                        </li>
+                    </ul>
+                    </nav>
+                </div>
+            </div>
+    </footer>
+
+</body>
+
+</html>
