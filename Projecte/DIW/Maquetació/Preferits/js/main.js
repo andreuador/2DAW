@@ -145,21 +145,4 @@ document.addEventListener("DOMContentLoaded", (event) => {
             }
         });
     }
-
-    function likeButtonClick(button) {
-		// Verifica si el botón ya ha sido marcado como "Me gusta"
-		if (button.classList.contains('liked')) {
-			// Si ya le gustaba, cambia el estilo y el texto para indicar que ya no le gusta
-			button.classList.remove('liked');
-			button.style.backgroundColor = '';
-			button.style.color = '';
-			button.innerHTML = 'Me gusta';
-		} else {
-			// Si no le gustaba, cambia el estilo y el texto para indicar que le gusta
-			button.classList.add('liked');
-			button.style.backgroundColor = 'green';
-			button.style.color = 'white';
-			button.innerHTML = '¡Te gusta!';
-		}
-	}
 });

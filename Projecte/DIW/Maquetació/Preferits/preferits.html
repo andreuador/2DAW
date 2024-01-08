@@ -11,7 +11,7 @@
     <link href="css/variables.css" type="text/css" rel="stylesheet">
     <link href="css/squeleton-frontend.css" type="text/css" rel="stylesheet">
     <link href="css/styles_favorits.css" type="text/css" rel="stylesheet">
-    <script src="js/menu-burguer.js" defer></script>
+    <script src="js/menu-burger.js" defer></script>
     <!--<script src="js/main.js" defer></script>
 	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>-->
 
@@ -199,5 +199,23 @@
     </footer>
 
 </body>
+<script>
+    function likeButtonClick(button) {
+		// Verifica si el botón ya ha sido marcado como "Me gusta"
+		if (button.classList.contains('liked')) {
+			// Si ya le gustaba, cambia el estilo y el texto para indicar que ya no le gusta
+			button.classList.remove('liked');
+			button.style.backgroundColor = '';
+			button.style.color = '';
+			button.innerHTML = 'Me gusta';
+		} else {
+			// Si no le gustaba, cambia el estilo y el texto para indicar que le gusta
+			button.classList.add('liked');
+			button.style.backgroundColor = 'green';
+			button.style.color = 'white';
+			button.innerHTML = '¡Te gusta!';
+		}
+	}
+</script>
 
 </html>

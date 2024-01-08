@@ -1,7 +1,6 @@
 /*--------------------------------- Main ---------------------------------------------*/
 
 main {
-    font-family: 'Ubuntu', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -9,27 +8,32 @@ main {
     width: 100%;
 }
 
-.login {
-    margin: 0 auto;
-    padding: 5rem;
-    border-radius: 0.6rem;
-    text-align: center;
+.form-div {
+    margin-top: 1.25rem;
+    background-color: #fff;
+    padding: 1.25rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 0.6rem rgba(0, 0, 0, 0.1);
 }
 
 .form-group {
-    margin-bottom: 1.25rem;
+    margin-bottom: calc(1.25rem - 0.3rem);
 }
 
 label {
     display: block;
-    margin-bottom: 0.3rem;
+    font-weight: bold;
+    margin-bottom: calc(1.25rem / 2);
 }
 
-input {
-    padding: 0.5rem;
-    font-size: 1rem;
-    border: 0.1rem solid black;
-    border-radius: 0.3rem;
+#email,
+#password {
+    width: 100%;
+    padding: 0.6rem;
+    margin-bottom: 0.6rem;
+    border: 1px solid #ccc;
+    border-radius: 0.2rem;
+    box-sizing: border-box;
 }
 
 input:valid {
@@ -40,48 +44,44 @@ input:invalid {
     border-color: red;
 }
 
-.valid { 
-    border: 0.1rem solid green; 
+.valid {
+    border: 0.1rem solid green;
 }
 
-.invalid { 
-    border: 0.1rem solid red; 
+.invalid {
+    border: 0.1rem solid red;
 }
 
+/* Estilos para el botón de envío */
 #submit {
-    background-color: #e7d381ff;
-    color: white;
-    padding: 0.6rem 1.25rem;
+    background-color: var(--tertiary-color);
+    color: var(--quaternary-color);
+    padding: 0.6rem 0.9rem;
     border: none;
-    border-radius: 0.3rem;
+    border-radius: 0.2rem;
     cursor: pointer;
-    margin: 0.6rem;
 }
 
 #submit:hover {
-    background-color: #aa8e31ff;
+    background-color: var(--secundary-color);
 }
 
 .error-message {
     color: red;
 }
 
-.form-group-submit > p > a {
-    color: black;
-}
-
-.form-group-submit > p > a:hover {
-    color: #545353;
+.form-group>p>a {
+    text-decoration: none;
 }
 
 .suggestions-list {
     list-style: none;
     margin: 0;
     padding: 0;
-    width: 18.75rem; 
+    width: 18.75rem;
     position: absolute;
     background-color: white;
-    border: orem solid #ccc;
+    border: 1px solid #ccc;
     border-radius: 0.3rem;
     display: none;
     text-align: left;
@@ -101,7 +101,9 @@ input:invalid {
 }
 
 /* Estilos para el modal */
-.modal-correct, .modal-incorrect-email, .modal-incorrect-pwd {
+.modal-correct,
+.modal-incorrect-email,
+.modal-incorrect-pwd {
     display: none;
     position: fixed;
     z-index: 1;
@@ -122,7 +124,9 @@ input:invalid {
     text-align: center;
 }
 
-.close, .close-email, .close-pwd {
+.close,
+.close-email,
+.close-pwd {
     color: #aaa;
     float: right;
     font-size: 1.75rem;

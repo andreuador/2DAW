@@ -53,6 +53,22 @@ document.addEventListener("DOMContentLoaded", (event) => {
         elements.email.classList.remove("hovered");
     });
 
+    elements.password.addEventListener("mouseover", function () {
+        this.style.backgroundColor = "#f0f0f0";
+    });
+
+    elements.password.addEventListener("mouseout", function () {
+        this.style.backgroundColor = "";
+    });
+
+    elements.password.addEventListener("mousemove", () => {
+        elements.password.classList.add("hovered");
+    });
+
+    elements.password.addEventListener("mouseout", () => {
+        elements.password.classList.remove("hovered");
+    });
+
     // Afegeix l'escoltador d'esdeveniments de presentació del formulari
     elements.form.addEventListener("submit", function (event) {
 

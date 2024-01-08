@@ -6,9 +6,12 @@ main {
     text-align: center;
 }
 
-#form-control {
-    display: flex;
-    flex-wrap: wrap;
+.form-div {
+    margin-top: 1.25rem;
+    background-color: #fff;
+    padding: 1.25rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 0.6rem rgba(0, 0, 0, 0.1);
 }
 
 #constitutionWriting {
@@ -16,42 +19,57 @@ main {
 }
 
 .form-group {
-    margin-bottom: 20px;
-    flex: 1 1 300px;
+    margin-bottom: calc(1.25rem - 0.3rem);
 }
 
+/* Estilos para etiquetas */
 label {
     display: block;
-    margin-bottom: 5px;
+    font-weight: bold;
+    margin-bottom: calc(var(--form-padding) / 2);
 }
 
-input {
-    padding: 8px;
-    font-size: 16px;
-    border: 2px solid transparent;
-    border-radius: 5px;
+/* Estilos para inputs, selects y textareas */
+#nom,
+#cognoms,
+#adreça,
+#email,
+#nom-empresa,
+#dni,
+#password,
+#mobil,
+#cif,
+#manager-nif,
+#subscripcio,
+#constitutionWriting {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
 }
 
-.valid { 
-    border: 2px solid green; 
+.valid {
+    border: 2px solid green;
 }
 
-.invalid { 
-    border: 2px solid red; 
+.invalid {
+    border: 2px solid red;
 }
 
+/* Estilos para el botón de envío */
 #submit {
-    background-color: #e7d381ff;
-    color: white;
-    padding: 10px 20px;
+    background-color: var(--tertiary-color);
+    color: var(--quaternary-color);
+    padding: 0.6rem 0.9rem;
     border: none;
-    border-radius: 5px;
+    border-radius: 0.2rem;
     cursor: pointer;
-    margin: 10px;
 }
 
 #submit:hover {
-    background-color: #aa8e31ff;
+    background-color: var(--secundary-color);
 }
 
 .error-message {
@@ -66,7 +84,7 @@ a {
     list-style: none;
     margin: 0;
     padding: 0;
-    width: 300px; 
+    width: 18.75rem;
     position: absolute;
     background-color: white;
     border: 1px solid #ccc;
@@ -89,7 +107,9 @@ a {
 }
 
 /* Estilos para el modal */
-.modal-correct, .modal-incorrect-email, .modal-incorrect-pwd {
+.modal-correct,
+.modal-incorrect-email,
+.modal-incorrect-pwd {
     display: none;
     position: fixed;
     z-index: 1;
@@ -110,7 +130,9 @@ a {
     text-align: center;
 }
 
-.close, .close-email, .close-pwd {
+.close,
+.close-email,
+.close-pwd {
     color: #aaa;
     float: right;
     font-size: 28px;

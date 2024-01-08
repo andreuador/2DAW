@@ -4,16 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Preferits</title>
+    <title>Inici sessió</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <link href="css/Normalize.css" type="text/css" rel="stylesheet">
     <link href="css/grid.css" type="text/css" rel="stylesheet">
     <link href="css/variables.css" type="text/css" rel="stylesheet">
     <link href="css/squeleton-frontend.css" type="text/css" rel="stylesheet">
     <link href="css/styles_login.css" type="text/css" rel="stylesheet">
-    <script src="js/menu-burguer.js" defer></script>
-    <!--<script src="js/main.js" defer></script>
-	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>-->
+    <script src="js/main.js" defer></script>
+    <script src="js/menu-burger.js" defer></script>
+    <!--<script src="js/searchbar.js" defer></script>-->
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 </head>
 
@@ -102,66 +103,65 @@
             </div>
         </div>
     </header>
-	<main>
-		<div class="container">
-			<div class="row">
-				<div class="col-12">
-					<div class="login">
-						<h1>Iniciar sessió</h1>
-						<form id="form-control" novalidate>
-							<div class="form-group">
-								<label for="email">Correu electrònic: </label>
-								<input type="text" id="email" name="email" placeholder="Correu electrònic"
-									pattern="^[a-z0-9]+@[a-z0-9]+\.[a-z]{2,4}$" required>
-								<ul id="suggestions" class="suggestions-list"></ul>
-							</div>
-
-							<div class="form-group">
-								<label for="password">Contrasenya: </label>
-								<input type="password" id="password" name="password" placeholder="Contrasenya"
-									pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$" required>
-							</div>
-
-							<div class="form-group-submit">
+    <main>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="form-div">
+                        <h1>Iniciar sessió</h1>
+                        <form id="form-control" novalidate>
+                            <div class="form-group">
+                                <label for="email">Correu electrònic:</label>
+                                <input type="email" id="email" name="email" placeholder="Correu electrònic" required
+                                    autocomplete="email" pattern="^[a-z0-9]+@[a-z0-9]+\.[a-z]{2,4}$">
+                                <ul id="suggestions" class="suggestions-list"></ul>
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Contrasenya:</label>
+                                <input type="password" id="password" name="password" placeholder="Contrasenya" required
+                                    pattern="/^(?=.*[0-9])(?=.*[A-Z])(?=.*[a-z])(?=.*[-_.*]).{8,20}$/v"
+                                    autocomplete="current-password">
+                            </div>
+                            <div class="form-group">
 								<p><a href="#contraseña">Heu oblidat la contrasenya?</a></p>
-								<button type="submit" id="submit">Iniciar sessió</button>
-								<p>No tens compte? <a href="HTMLCSS/registro.html">Registra't ara</a></p>
+								<input type="submit" id="submit" value="Iniciar sessió">
+								<p>No tens compter? <a href="HTMLCSS/registro.html">Registra't ara</a></p>
 							</div>
-						</form>
-						<div class="error-message" id="errorMessage"></div>
-						<div class="success-message" id="successMessage"></div>
+                        </form>
+                        <div class="error-message" id="errorMessage"></div>
+                        <div class="success-message" id="successMessage"></div>
 
-						<div class="modal-correct" id="modal-correct">
-							<div class="modal-content">
-								<span class="close">&times;</span>
-								<p>Inicio de sessió correcte!</p>
-							</div>
-						</div>
+                        <div class="modal-correct" id="modal-correct">
+                            <div class="modal-content">
+                                <span class="close">&times;</span>
+                                <p>Inicio de sessió correcte!</p>
+                            </div>
+                        </div>
 
-						<div class="modal-incorrect-email" id="modal-incorrect-email">
-							<div class="modal-content">
-								<span class="close-email">&times;</span>
-								<p>Correu electrònic incorrecte!</p>
-							</div>
-						</div>
+                        <div class="modal-incorrect-email" id="modal-incorrect-email">
+                            <div class="modal-content">
+                                <span class="close-email">&times;</span>
+                                <p>Correu electrònic incorrecte!</p>
+                            </div>
+                        </div>
 
-						<div class="modal-incorrect-pwd" id="modal-incorrect-pwd">
-							<div class="modal-content">
-								<span class="close-pwd">&times;</span>
-								<p>La contrasenya ha de contenir almenys 8 caràcters, incloent-hi una majúscula, una
-									minúscula, un número
-									i un dels següents caràcters especials: -_!</p>
-							</div>
-						</div>
-						<!-- Gráfico de estadísticas de inicio de sesión -->
+                        <div class="modal-incorrect-pwd" id="modal-incorrect-pwd">
+                            <div class="modal-content">
+                                <span class="close-pwd">&times;</span>
+                                <p>La contrasenya ha de contenir almenys 8 caràcters, incloent-hi una majúscula, una
+                                    minúscula, un número
+                                    i un dels següents caràcters especials: -_!</p>
+                            </div>
+                        </div>
+                        <!-- Gráfico de estadísticas de inicio de sesión -->
                         <!--<canvas id="loginChart" width="400" height="200"></canvas>-->
-					</div>
-				</div>
-			</div>
-		</div>
-	</main>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
 
-	<!-- Container-fluid ocupa el 100% de l'amplaria de la pàgina -->
+    <!-- Container-fluid ocupa el 100% de l'amplaria de la pàgina -->
     <footer class="container-fluid">
         <div class="row">
             <div class="col-12">
